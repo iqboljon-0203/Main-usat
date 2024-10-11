@@ -131,6 +131,7 @@
     .accordion-item {
     width: 25%;
     height: 100%;
+    overflow: hidden;
 }
 .accordion-item.active {
     width: 60%;
@@ -173,11 +174,15 @@
         max-height: 400px;
     }
     .accordion-item {
-    width: 25%;
+    width: 50%;
     height: 100%;
 }
+.accordion-item:nth-child(2){
+    display: none;
+}
+
 .accordion-item.active {
-    width: 60%;
+    width: 90%;
     opacity: 1;
 }
 }
@@ -195,11 +200,11 @@
         max-height: 400px;
     }
     .accordion-item {
-    width: 25%;
+    width: 50%;
     height: 100%;
 }
 .accordion-item.active {
-    width: 60%;
+    width: 90%;
     opacity: 1;
 }
 }
@@ -217,13 +222,17 @@
         max-height: 400px;
     }
     .accordion-item {
-    width: 25%;
+    width: 50%;
     height: 100%;
 }
+.accordion-item:nth-child(3){
+    display: none;
+}
 .accordion-item.active {
-    width: 60%;
+    width: 90%;
     opacity: 1;
 }
+
 }
 @media screen and (max-width: 540px) {
     .accordion-item .content {
@@ -239,11 +248,11 @@
         max-height: 400px;
     }
     .accordion-item {
-    width: 25%;
+    width: 50%;
     height: 100%;
 }
 .accordion-item.active {
-    width: 60%;
+    width: 90%;
     opacity: 1;
 }
 }
@@ -261,11 +270,11 @@
         max-height: 400px;
     }
     .accordion-item {
-    width: 25%;
+    width: 50%;
     height: 100%;
 }
 .accordion-item.active {
-    width: 60%;
+    width: 90%;
     opacity: 1;
 }
 }
@@ -283,11 +292,11 @@
         max-height: 400px;
     }
     .accordion-item {
-    width: 25%;
+    width: 50%;
     height: 100%;
 }
 .accordion-item.active {
-    width: 60%;
+    width: 90%;
     opacity: 1;
 }
 }
