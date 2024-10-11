@@ -1,0 +1,153 @@
+@font-face {
+    font-family: 'Steppe Trial';
+    src: url('./assets/fonts/SteppeTrial-Bold-BF64acc0ed805fb.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Steppe Trial';
+    src: url('./assets/fonts/SteppeTrial-Medium-BF64acc0ed96cac.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Steppe Trial';
+    src: url('./assets/fonts/SteppeTrial-Regular-BF64acc0eda02f4.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Inter';
+    src: url('./assets/fonts/Inter_18pt-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Inter';
+    src: url('./assets/fonts/Inter_18pt-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Inter';
+    src: url('./assets/fonts/Inter_18pt-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('./assets/fonts/Inter_24pt-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('./assets/fonts/Inter_24pt-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('./assets/fonts/Inter_24pt-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('./assets/fonts/Inter_28pt-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('./assets/fonts/Inter_28pt-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('./assets/fonts/Inter_28pt-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    scroll-behavior: smooth;
+    background-color: rgba(245, 246, 250, 1);
+    position: relative;
+
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.loader {
+  animation: spin 1s linear infinite;
+}
+.swiper {
+  width: 100%;
+  height: 700px;
+  border-radius: 30px;
+}
+
+
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  border-radius: 30px;
+
+  
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+
+.swiper-slide:nth-child(2n) {
+  width: 60%;
+}
+
+.swiper-slide:nth-child(3n) {
+  width: 40%;
+}
+
+  

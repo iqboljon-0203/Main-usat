@@ -1,0 +1,453 @@
+.hero {
+    width: 100%;
+    padding: 20px;
+}
+.hero_container {
+    background-image: url('../../../assets/logos/back.webp');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center top;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+}
+.title {
+    width: 70%;
+    text-transform: uppercase;
+    font-family: Steppe Trial;
+    font-size: 82px;
+    font-weight: 700;
+    line-height: 73.8px;
+    letter-spacing: -0.02em;
+    text-align: start;
+    padding-left: 40px;
+    margin-bottom: 20px;
+    color: white;
+}
+.hero_info {
+    font-family: Inter;
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 44.8px;
+    text-align: start;
+    width: 50%;
+    padding-left: 40px;
+    color: white;
+    margin-bottom: 40px;
+}
+.buttons {
+    width: 100%;
+    display: flex;
+    gap: 20px;
+    padding-left: 40px;
+    justify-content: start;
+}
+ .buttons>a:nth-child(1)>button{
+        width:400px;
+    }
+    
+    .buttons>a:nth-child(2)>button{
+        width: 400px;
+    }
+
+@media screen and (max-width: 1700px) {
+    .title {
+        font-size: 77px;
+        font-weight: 700;
+        line-height: 68.8px;
+        letter-spacing: -0.02em;
+        text-align: left;
+        margin-bottom: 18px;
+    }
+    .hero_info {
+        font-size: 28px;
+        font-weight: 400;
+        line-height: 40.8px;
+        margin-bottom: 35px;
+    }
+     .buttons>a:nth-child(1)>button{
+        width:400px;
+    }
+    
+    .buttons>a:nth-child(2)>button{
+        width: 400px;
+    }
+}
+@media screen and (max-width: 1520px) {
+    .title {
+        width: 80%;
+        font-size: 72px;
+        font-weight: 700;
+        line-height: 62.8px;
+        letter-spacing: -0.02em;
+        text-align: left;
+        margin-bottom: 18px;
+    }
+    .hero_info {
+        width: 80%;
+        font-size: 25px;
+        font-weight: 400;
+        line-height: 36.8px;
+        margin-bottom: 32px;
+    }
+}
+@media screen and (max-width: 1400px) {
+    .title {
+        width: 80%;
+        font-size: 65px;
+        font-weight: 700;
+        line-height: 57.8px;
+        letter-spacing: -0.02em;
+        text-align: left;
+        margin-bottom: 18px;
+    }
+    .hero_info {
+        width: 80%;
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 32.8px;
+        margin-bottom: 30px;
+    }
+}
+@media screen and (max-width: 1275px) {
+    .title {
+        width: 80%;
+        font-size: 60px;
+        font-weight: 700;
+        line-height: 52.8px;
+        letter-spacing: -0.02em;
+        text-align: left;
+        margin-bottom: 18px;
+    }
+    .hero_info {
+        width: 80%;
+        font-size: 22px;
+        font-weight: 400;
+        line-height: 30.8px;
+        margin-bottom: 30px;
+    }
+    .buttons>a:nth-child(1)>button{
+        width:300px;
+    }
+    
+    .buttons>a:nth-child(2)>button{
+        width: 300px;
+    }
+}
+@media screen and (max-width: 1175px) {
+    .title {
+        width: 80%;
+        font-size: 55px;
+        font-weight: 700;
+        line-height: 47.8px;
+        letter-spacing: -0.02em;
+        text-align: left;
+        margin-bottom: 18px;
+    }
+    .hero_info {
+        width: 80%;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 27.8px;
+        margin-bottom: 27px;
+    }
+}
+@media screen and (max-width: 1080px) {
+    .title {
+        width: 80%;
+        font-size: 50px;
+        font-weight: 700;
+        line-height: 42.8px;
+        letter-spacing: -0.02em;
+        text-align: left;
+        margin-bottom: 16px;
+    }
+    .hero_info {
+        width: 80%;
+        font-size: 20px;
+        font-weight: 300;
+        line-height: 24.8px;
+        margin-bottom: 25px;
+    }
+}
+@media screen and (max-width: 980px) {
+    .title {
+        width: 80%;
+        font-size: 45px;
+        font-weight: 700;
+        line-height: 40.8px;
+        letter-spacing: -0.02em;
+        text-align: left;
+        margin-bottom: 16px;
+    }
+    .hero_info {
+        width: 80%;
+        font-size: 20px;
+        font-weight: 300;
+        line-height: 23.8px;
+        margin-bottom: 20px;
+    }
+}
+@media screen and (max-width: 950px) {
+    .buttons {
+        justify-content: flex-start;
+        flex-wrap: wrap;
+
+    }
+    .buttons > a:nth-child(2) {
+        order:10
+    }
+    .buttons>a:nth-child(1)>button{
+        width:300px;
+    }
+    .buttons>a:nth-child(3)>button{
+        width: 300px;
+    }
+    .title {
+        width: 80%;
+        font-size: 40px;
+        font-weight: 700;
+        line-height: 36.8px;
+        letter-spacing: -0.02em;
+        text-align: left;
+        margin-bottom: 16px;
+    }
+    .hero_info {
+        width: 80%;
+        font-size: 18px;
+        font-weight: 300;
+        line-height: 22.8px;
+        margin-bottom: 20px;
+    }
+    .hero{
+        background-position: calc(50% - 120px) top;
+    }
+}
+@media screen and (max-width: 880px) {
+    .buttons {
+        justify-content: center;
+        flex-wrap: wrap;
+        padding-left: 0;
+
+    }
+    .buttons > a:nth-child(2) {
+        order:10
+    }
+    .buttons>a:nth-child(1)>button{
+        width:300px;
+    }
+    .buttons>a:nth-child(3)>button{
+        width: 300px;
+    }
+    .title {
+        width: 90%;
+        font-size: 40px;
+        font-weight: 700;
+        padding-left: 0;
+        line-height: 36.8px;
+        letter-spacing: -0.02em;
+        text-align: center;
+        margin: 0 auto;
+        margin-bottom: 16px;
+        
+    }
+    .hero_info {
+        width: 80%;
+        padding-left: 0;
+        font-size: 18px;
+        font-weight: 300;
+        line-height: 22.8px;
+        text-align: center;
+        margin: 0 auto;
+        margin-bottom: 20px;
+    }
+    .hero{
+        background-position: calc(50% - 120px) top;
+    }
+}
+@media screen and (max-width: 780px) {
+    .title {
+        width: 90%;
+        font-size: 38px;
+        font-weight: 700;
+        line-height: 34.8px;
+        letter-spacing: -0.02em;
+        text-align: center;
+        margin-bottom: 16px;
+    }
+    .hero_info {
+        width: 80%;
+        font-size: 18px;
+        font-weight: 300;
+        line-height: 22.8px;
+        margin-bottom: 20px;
+    }
+    .hero{
+        background-position: calc(50% - 140px) top;
+    }
+}
+@media screen and (max-width: 680px) {
+    .title {
+        width: 90%;
+        font-size: 35px;
+        font-weight: 700;
+        line-height: 32.8px;
+        letter-spacing: -0.02em;
+        text-align: center;
+        margin-bottom: 16px;
+    }
+    .hero_info {
+        width: 80%;
+        font-size: 16px;
+        font-weight: 300;
+        line-height: 21.8px;
+        margin-bottom: 20px;
+    }
+     .hero{
+        background-position: calc(50% - 160px) top;
+    }
+    .buttons {
+        justify-content: center;
+
+    }
+    .buttons > a:nth-child(2) {
+        order:10
+    }
+    .buttons>a:nth-child(1)>button{
+        width:500px;
+    }
+    .buttons>a:nth-child(2)>button{
+        width: 500px;
+    }
+}
+@media screen and (max-width: 620px) {
+    .buttons{
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+    .buttons {
+        justify-content: center;
+        flex-wrap: wrap;
+
+    }
+    .buttons > a:nth-child(2) {
+        order:0;
+    }
+    .buttons>a:nth-child(1)>button{
+        width:500px;
+    }
+    .buttons>a:nth-child(3)>button{
+        width: 500px;
+    }
+    .buttons>a:nth-child(2)>button{
+        width: 500px;
+    }
+    .title {
+        width: 90%;
+        font-size: 32px;
+        font-weight: 700;
+        line-height: 30.8px;
+        letter-spacing: -0.02em;
+        text-align: center;
+        margin-bottom: 16px;
+    }
+    .hero_info {
+        width: 85%;
+        font-size: 15px;
+        font-weight: 300;
+        line-height: 21px;
+        margin-bottom: 20px;
+    }
+    .hero{
+        background-position: calc(50% - 180px) top;
+    }
+}
+@media screen and (max-width: 530px) {
+  
+    .buttons{
+        flex-direction: column;
+        gap: 10px;
+    }
+     .buttons>a:nth-child(1)>button{
+        width:400px;
+    }
+    .buttons>a:nth-child(3)>button{
+        width: 400px;
+    }
+    .buttons>a:nth-child(2)>button{
+        width: 400px;
+    }
+}
+@media screen and (max-width: 480px) {
+    .title {
+        width: 90%;
+        font-size: 30px;
+        font-weight: 700;
+        line-height: 27.8px;
+        letter-spacing: -0.02em;
+        text-align: center;
+        margin-bottom: 16px;
+    }
+    .hero_info {
+        width: 85%;
+        font-size: 15px;
+        font-weight: 300;
+        line-height: 21px;
+        margin-bottom: 20px;
+    }
+    .hero{
+        background-position: calc(50% - 200px) top;
+    }
+     .buttons>a:nth-child(1)>button{
+        width:300px;
+    }
+    .buttons>a:nth-child(3)>button{
+        width: 300px;
+    }
+    .buttons>a:nth-child(2)>button{
+        width: 300px;
+    }
+    
+}
+@media screen and (max-width: 410px) {
+    .title {
+        width: 90%;
+        font-size: 30px;
+        font-weight: 700;
+        line-height: 27.8px;
+        letter-spacing: -0.02em;
+        text-align: center;
+        margin-bottom: 16px;
+    }
+    .hero_info {
+        width: 85%;
+        font-size: 15px;
+        font-weight: 300;
+        line-height: 21px;
+        margin-bottom: 20px;
+    }
+    .hero{
+        background-position: calc(50% - 220px) top;
+    }
+      .buttons>a:nth-child(1)>button{
+        width:300px;
+    }
+    .buttons>a:nth-child(3)>button{
+        width: 300px;
+    }
+    .buttons>a:nth-child(2)>button{
+        width: 300px;
+    }
+    
+}
+
+
+
+

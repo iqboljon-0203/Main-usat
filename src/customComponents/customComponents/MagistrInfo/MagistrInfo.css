@@ -1,0 +1,520 @@
+.magistr_info {
+    width: 100%;
+
+}
+.magistr_info_list {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding:0px 20px;
+
+}
+.magistr_info_item {
+    width: 50%;
+    border-radius: 30px;
+
+}
+.magistr_info_item_img{
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+}
+.magistr_info_item_new {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    border-radius: 30px;
+    padding-left: 40px;
+    background: rgba(33, 70, 109, 1);
+
+}
+.magistr_info_item_new div {
+    width: 80%;
+}
+.magistr_info_item_title {
+    font-family: Steppe Trial;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 50.2px;
+    letter-spacing: -0.02em;
+    text-align: left;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 1);
+    margin-bottom: 20px;
+}
+.magistr_info_item_title_span {
+    font-family: Steppe Trial;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 43.2px;
+    letter-spacing: -0.02em;
+    text-align: left;
+    color: rgba(255, 200, 42, 1);
+}
+.magistr_info_item_text {
+    font-family: Inter;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 33.6px;
+    text-align: left;
+
+    color: rgba(255, 255, 255, 0.5);
+}
+@media screen and (max-width: 1770px) {
+    .magistr_info_item_new {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        padding-left: 40px;
+    }
+    .magistr_info_item_new div {
+        width: 80%;
+    }
+    .magistr_info_item_title {
+        font-size: 44px;
+        font-weight: 700;
+        line-height: 46.2px;
+        letter-spacing: -0.02em;
+
+        margin-bottom: 20px;
+    }
+    .magistr_info_item_title_span {
+        font-size: 44px;
+        font-weight: 700;
+        line-height: 46.2px;
+        letter-spacing: -0.02em;
+    }
+    .magistr_info_item_text {
+        font-size: 22px;
+        font-weight: 400;
+        line-height: 30.6px;
+        text-align: left;
+
+    }
+}
+@media screen and (max-width: 1580px) {
+    .magistr_info_item_new {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        padding-left: 30px;
+    }
+    .magistr_info_item_new div {
+        width: 90%;
+    }
+    .magistr_info_item_title {
+        font-size: 40px;
+        font-weight: 700;
+        line-height: 42.2px;
+        letter-spacing: -0.02em;
+
+        margin-bottom: 20px;
+    }
+    .magistr_info_item_title_span {
+        font-size: 40px;
+        font-weight: 700;
+        line-height: 42.2px;
+        letter-spacing: -0.02em;
+    }
+    .magistr_info_item_text {
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 27.6px;
+        text-align: left;
+
+    }
+}
+@media screen and (max-width: 1370px) {
+    .magistr_info_item_new {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        padding-left: 20px;
+    }
+    .magistr_info_item_new div {
+        width: 90%;
+    }
+    .magistr_info_item_title {
+        font-size: 38px;
+        font-weight: 700;
+        line-height: 40.2px;
+        letter-spacing: -0.02em;
+
+        margin-bottom: 20px;
+    }
+    .magistr_info_item_title_span {
+        font-size: 38px;
+        font-weight: 700;
+        line-height: 40.2px;
+        letter-spacing: -0.02em;
+    }
+    .magistr_info_item_text {
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 25.6px;
+        text-align: left;
+
+    }
+}
+@media screen and (max-width: 1270px) {
+    .magistr_info_item_new {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        padding-left: 20px;
+    }
+    .magistr_info_item_new div {
+        width: 90%;
+    }
+    .magistr_info_item_title {
+        font-size: 36px;
+        font-weight: 700;
+        line-height: 37.2px;
+        letter-spacing: -0.02em;
+
+        margin-bottom: 18px;
+    }
+    .magistr_info_item_title_span {
+        font-size: 36px;
+        font-weight: 700;
+        line-height: 37.2px;
+        letter-spacing: -0.02em;
+    }
+    .magistr_info_item_text {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 23.6px;
+        text-align: left;
+
+    }
+}
+@media screen and (max-width: 1140px) {
+    .magistr_info_item_new {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        padding-left: 20px;
+    }
+    .magistr_info_item_new div {
+        width: 90%;
+    }
+    .magistr_info_item_title {
+        font-size: 32px;
+        font-weight: 700;
+        line-height: 32.2px;
+        letter-spacing: -0.02em;
+
+        margin-bottom: 16px;
+    }
+    .magistr_info_item_title_span {
+        font-size: 32px;
+        font-weight: 700;
+        line-height: 32.2px;
+        letter-spacing: -0.02em;
+    }
+    .magistr_info_item_text {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 22.4px;
+        text-align: left;
+
+    }
+}
+@media screen and (max-width: 1100px) {
+    .magistr_info_item_new {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        padding-left: 20px;
+    }
+    .magistr_info_item_new div {
+        width: 90%;
+    }
+    .magistr_info_item_title {
+        font-size: 30px;
+        font-weight: 700;
+        line-height: 30.2px;
+        letter-spacing: -0.02em;
+
+        margin-bottom: 14px;
+    }
+    .magistr_info_item_title_span {
+        font-size: 30px;
+        font-weight: 700;
+        line-height: 30.2px;
+        letter-spacing: -0.02em;
+    }
+    .magistr_info_item_text {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 22.4px;
+        text-align: left;
+
+    }
+}
+@media screen and (max-width: 1040px) {
+    .magistr_info_item_new {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        padding-left: 15px;
+    }
+    .magistr_info_item_new div {
+        width: 90%;
+    }
+    .magistr_info_item_title {
+        font-size: 28px;
+        font-weight: 700;
+        line-height: 28.2px;
+        letter-spacing: -0.02em;
+
+        margin-bottom: 14px;
+    }
+    .magistr_info_item_title_span {
+        font-size: 28px;
+        font-weight: 700;
+        line-height: 28.2px;
+        letter-spacing: -0.02em;
+    }
+    .magistr_info_item_text {
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 21.4px;
+        text-align: left;
+
+    }
+}
+@media screen and (max-width: 970px) {
+    .magistr_info_item_new {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        padding-left: 20px;
+    }
+    .magistr_info_item_new div {
+        width: 90%;
+    }
+    .magistr_info_item_title {
+        font-size: 26px;
+        font-weight: 700;
+        line-height: 26.2px;
+        letter-spacing: -0.02em;
+
+        margin-bottom: 12px;
+    }
+    .magistr_info_item_title_span {
+        font-size: 26px;
+        font-weight: 700;
+        line-height: 26.2px;
+        letter-spacing: -0.02em;
+    }
+    .magistr_info_item_text {
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 20.4px;
+        text-align: left;
+
+    }
+}
+@media screen and (max-width: 910px) {
+    .magistr_info_item_new {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        padding-left: 20px;
+    }
+    .magistr_info_item_new div {
+        width: 90%;
+    }
+    .magistr_info_item_title {
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 24.2px;
+        letter-spacing: -0.02em;
+
+        margin-bottom: 12px;
+    }
+    .magistr_info_item_title_span {
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 24.2px;
+        letter-spacing: -0.02em;
+    }
+    .magistr_info_item_text {
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 18.4px;
+        text-align: left;
+
+    }
+}
+@media screen and (max-width: 900px) {
+    .magistr_info_item_new {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        padding-left: 20px;
+    }
+    .magistr_info_item_new div {
+        width: 90%;
+    }
+    .magistr_info_item_title {
+        font-size: 22px;
+        font-weight: 600;
+        line-height: 22.2px;
+        letter-spacing: -0.02em;
+
+        margin-bottom: 12px;
+    }
+    .magistr_info_item_title_span {
+        font-size: 22px;
+        font-weight: 600;
+        line-height: 22.2px;
+        letter-spacing: -0.02em;
+    }
+    .magistr_info_item_text {
+        font-size: 14px;
+        font-weight: 300;
+        line-height: 18.4px;
+        text-align: left;
+
+    }
+}
+@media screen and (max-width: 800px) {
+    .magistr_info_item_new {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        padding-left: 20px;
+    }
+    .magistr_info_item_new div {
+        width: 90%;
+    }
+    .magistr_info_item_title {
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 20.2px;
+        letter-spacing: -0.02em;
+
+        margin-bottom: 10px;
+    }
+    .magistr_info_item_title_span {
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 20.2px;
+        letter-spacing: -0.02em;
+    }
+    .magistr_info_item_text {
+        font-size: 13px;
+        font-weight: 300;
+        line-height: 15.4px;
+        text-align: left;
+
+    }
+}
+@media screen and (max-width: 700px) {
+    .magistr_info_item_new {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        padding-left: 20px;
+    }
+    .magistr_info_item_new div {
+        width: 90%;
+    }
+    .magistr_info_item_title {
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 20.2px;
+        letter-spacing: -0.02em;
+
+        margin-bottom: 10px;
+    }
+    .magistr_info_item_title_span {
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 20.2px;
+        letter-spacing: -0.02em;
+    }
+    .magistr_info_item_text {
+        font-size: 13px;
+        font-weight: 300;
+        line-height: 12.4px;
+        text-align: left;
+
+    }
+}
+@media screen and (max-width: 620px) {
+    .magistr_info_list {
+        flex-direction: column;
+        align-items: center
+    }
+    .magistr_info_item{    
+        width: 100%;
+
+    }
+    .magistr_info_item img{
+        border-radius: 30px;
+    }
+    .magistr_info_item_new {
+        padding-top: 60px;
+        padding-bottom: 60px;
+        padding-left: 20px;
+    }
+    .magistr_info_item_new div {
+        width: 95%;
+    }
+    .magistr_info_item_title {
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 21.6px;
+        letter-spacing: -0.02em;
+
+        margin-bottom: 10px;
+    }
+    .magistr_info_item_title_span {
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 21.6px;
+        letter-spacing: -0.02em;
+    }
+    .magistr_info_item_text {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 22.4px;
+        text-align: left;
+
+    }
+}
+@media screen and (max-width: 480px) {
+    .magistr_info_list {
+        flex-direction: column;
+        align-items: center
+    }
+    .magistr_info_item{    
+        width: 100%;
+
+    }
+    .magistr_info_item img{
+        border-radius: 30px;
+    }
+    .magistr_info_item_new {
+        padding-top: 50px;
+        padding-bottom: 50px;
+        padding-left: 20px;
+    }
+    .magistr_info_item_new div {
+        width: 95%;
+    }
+    .magistr_info_item_title {
+        font-size: 22px;
+        font-weight: 700;
+        line-height: 20.6px;
+        letter-spacing: -0.02em;
+
+        margin-bottom: 10px;
+    }
+    .magistr_info_item_title_span {
+        font-size: 22px;
+        font-weight: 700;
+        line-height: 20.6px;
+        letter-spacing: -0.02em;
+    }
+    .magistr_info_item_text {
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 20.4px;
+        text-align: left;
+
+    }
+}

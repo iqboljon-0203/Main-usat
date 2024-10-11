@@ -1,0 +1,257 @@
+.accordion_item {
+    padding: 25px 20px 25px 20px;
+    border-radius: 15px 15px 0px 0px;
+    font-family: Inter;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 33.6px;
+    text-align: left;
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    color: rgba(33, 70, 109, 1);
+}
+
+.AccordionItem > h2 > button > span {
+    display: none !important;
+}
+.AccordionItem > h2 > button {
+    padding: 0px;
+}
+
+.accordion_item_title {
+    font-family: Inter;
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 44.8px;
+    text-align: left;
+    color:  rgba(255, 255, 255, 1);
+
+    cursor: pointer;
+
+    padding: 25px 20px 25px 20px;
+    gap: 0px;
+    border-radius: 15px 0px 0px 0px;
+    opacity: 0px;
+    background:  rgba(255, 255, 255, 0.1);
+
+    margin-bottom: 15px;
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between; /* Ensure the space between text and icon */
+    border-radius: 5px; /* Optional: to match the rounded look */
+}
+.accordion_item_title.expanded {
+    background: rgba(255, 255, 255, 1);
+    color: rgba(33, 70, 109, 1);
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    padding: 25px 20px 25px 20px;
+    border-radius: 15px 15px 0px 0px;
+    opacity: 0px;
+}
+
+.accordionItemContent {
+    font-family: Inter;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 33.6px;
+    text-align: left;
+    color:  rgba(255, 255, 255, 1);
+
+
+
+    padding: 25px 20px 25px 20px;
+    border-radius: 0px 0px 15px 15px;
+    border: 1px 0px 0px 0px;
+    opacity: 0px;
+    background:  rgba(255, 255, 255, 0.5);
+
+
+}
+.accordion_item_title > h2 > button > span {
+    display: none !important;
+}
+/* Max-width: 1700px */
+@media (max-width: 1700px) {
+    .accordion_item_title {
+        font-size: 31px;
+        line-height: 40px;
+    }
+
+    .accordionItemContent {
+        font-size: 23px;
+        line-height: 30px;
+    }
+}
+
+/* Max-width: 1600px */
+@media (max-width: 1600px) {
+    .accordion_item_title {
+        font-size: 30px;
+        line-height: 39px;
+    }
+
+    .accordionItemContent {
+        font-size: 22px;
+        line-height: 29px;
+    }
+}
+
+/* Max-width: 1500px */
+@media (max-width: 1500px) {
+    .accordion_item_title {
+        font-size: 29px;
+        line-height: 38px;
+    }
+
+    .accordionItemContent {
+        font-size: 21px;
+        line-height: 28px;
+    }
+}
+
+/* Max-width: 1400px */
+@media (max-width: 1400px) {
+    .accordion_item_title {
+        font-size: 28px;
+        line-height: 37px;
+    }
+
+    .accordionItemContent {
+        font-size: 20px;
+        line-height: 27px;
+    }
+}
+
+/* Max-width: 1300px */
+@media (max-width: 1300px) {
+    .accordion_item_title {
+        font-size: 27px;
+        line-height: 36px;
+    }
+
+    .accordionItemContent {
+        font-size: 19px;
+        line-height: 26px;
+    }
+}
+
+/* Max-width: 1200px */
+@media (max-width: 1200px) {
+    .accordion_item_title {
+        font-size: 27px;
+        line-height: 35px;
+    }
+
+    .accordionItemContent {
+        font-size: 19px;
+        line-height: 25px;
+    }
+}
+
+/* Max-width: 1100px */
+@media (max-width: 1100px) {
+    .accordion_item_title {
+        font-size: 26px;
+        line-height: 34px;
+    }
+
+    .accordionItemContent {
+        font-size: 18px;
+        line-height: 24px;
+    }
+}
+
+/* Max-width: 1000px */
+@media (max-width: 1000px) {
+    .accordion_item_title {
+        font-size: 26px;
+        line-height: 33px;
+    }
+
+    .accordionItemContent {
+        font-size: 18px;
+        line-height: 23px;
+    }
+}
+
+/* Max-width: 900px */
+@media (max-width: 900px) {
+    .accordion_item_title {
+        font-size: 25px;
+        line-height: 32px;
+    }
+
+    .accordionItemContent {
+        font-size: 17px;
+        line-height: 22px;
+    }
+}
+
+/* Max-width: 800px */
+@media (max-width: 800px) {
+    .accordion_item_title {
+        font-size: 24px;
+        line-height: 31px;
+    }
+
+    .accordionItemContent {
+        font-size: 17px;
+        line-height: 21px;
+    }
+}
+
+/* Max-width: 700px */
+@media (max-width: 700px) {
+    .accordion_item_title {
+        font-size: 22px;
+        line-height: 30px;
+    }
+
+    .accordionItemContent {
+        font-size: 16px;
+        line-height: 20px;
+    }
+}
+
+/* Max-width: 600px */
+@media (max-width: 600px) {
+    .accordion_item_title {
+        font-size: 20px;
+        line-height: 29px;
+    }
+
+    .accordionItemContent {
+        font-size: 16px;
+        line-height: 19px;
+    }
+}
+
+/* Max-width: 500px */
+@media (max-width: 500px) {
+    .accordion_item_title {
+        font-size: 18px;
+        line-height: 28px;
+        padding: 15px 10px;
+    }
+
+    .accordionItemContent {
+        font-size: 16px;
+        line-height: 18px;
+        padding: 15px 10px;
+    }
+}
+
+/* Max-width: 410px */
+@media (max-width: 410px) {
+    .accordion_item_title {
+        font-size: 18px;
+        line-height: 25.2px;
+        padding: 15px 10px;
+    }
+
+    .accordionItemContent {
+        font-size: 16px;
+        line-height: 22.4px;
+        padding: 15px 10px;
+    }
+}

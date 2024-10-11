@@ -1,0 +1,50 @@
+.mySwiper {
+    width: 100%;
+    height: 100%;
+}
+.swiper-wrapper{
+    width: 100%;
+    height: 100%;
+}
+
+.comments_item {
+    width: 100%;
+    height: 100%;
+    padding: 40px 40px 20px 40px;
+}
+
+.comments_item_text {
+    width: 70%;
+    font-family: Inter;
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 28.8px;
+    text-align: left;
+    color: #696984;
+    padding-bottom: 60px;
+}
+.comments_item_author {
+    width: 70%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.comments_author_title {
+    font-family: Inter;
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 24.2px;
+    text-align: left;
+
+    color: #00274c;
+    margin-bottom: 10px;
+}
+.comments_author_text {
+    font-family: Inter;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 18px;
+    text-align: left;
+    color: #bdbdbd;
+}
