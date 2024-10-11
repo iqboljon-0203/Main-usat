@@ -29,6 +29,7 @@
     padding-bottom: 20px;
 }
 .usat_gallery_buttons {
+    display: none;
     width: 15%;
     height: 86px;
     display: flex;
@@ -165,7 +166,7 @@
     align-items: center;
     gap: 5px;
 }
-.usat_gallery_buttons button{
+.usat_gallery_buttons div{
     border-radius: 10px;
 }
 }
@@ -184,6 +185,17 @@
     align-items: center;
     gap: 5px;
 }
+.usat_gallery_buttons div{
+    border-radius: 5px;
+}
+.usat_gallery_button_left img{
+    width: 25px;
+    height: 25px;
+}
+.usat_gallery_button_right img{
+    width: 25px;
+    height: 25px;
+}
 }
 @media screen and (max-width: 450px) {
     .usat_gallery_title{
@@ -199,5 +211,11 @@
     display: flex;
     align-items: center;
     gap: 5px;
+}
+.usat_gallery_buttons div{
+    border-radius: 5px;
+}
+.usat_gallery_buttons div img{
+    width: 25px;
 }
 }

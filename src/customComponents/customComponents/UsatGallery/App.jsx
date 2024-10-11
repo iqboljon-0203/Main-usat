@@ -1,7 +1,7 @@
 import React from 'react'
 import "./UsatGallery.css"
 import NextIcon from "../../../assets/logos/next.png";
-import PrevIcon from '../../../assets/logos/prev.png'
+import PrevIcon from '../../../assets/logos/left_icon.png'
 // import SwiperGallery from "../../../components/SwiperGallery/App.jsx";
 import NewSlider from '../../../components/NewSlider/App.jsx';
 import { useTranslation } from 'react-i18next';
