@@ -5,8 +5,6 @@
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
     padding: 30px 0px;
-    border-top-left-radius: 30px;
-    border-top-right-radius: 30px;
 }
 .navbar header{
     width: 100%;
