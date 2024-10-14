@@ -286,6 +286,7 @@
     }
     .comments_left{
         width: 100%;
+        height: 320px;
     }
     .comments_right{
         width: 100%;

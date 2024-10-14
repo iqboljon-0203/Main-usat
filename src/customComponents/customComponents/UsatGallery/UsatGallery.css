@@ -7,6 +7,7 @@
     background-color: #21466d;
     border-radius: 30px;
     padding: 20px;
+    padding-top: 0px;
 }
 .usat_gallery_top {
     width: 100%;
@@ -148,8 +149,10 @@
     height: 55px;
     display: flex;
     align-items: center;
+    padding-top: 0px;
     gap: 10px;
 }
+
 }
 @media screen and (max-width: 550px) {
     .usat_gallery_title{
@@ -163,6 +166,7 @@
     width: 30%;
     height: 54px;
     display: flex;
+    padding-top: 0;
     align-items: center;
     gap: 5px;
 }
@@ -179,6 +183,7 @@
     line-height: 18.2px;
     }
     .usat_gallery_buttons {
+        padding-top: 0px;
     width: 30%;
     height: 46px;
     display: flex;
@@ -206,6 +211,7 @@
     line-height: 18.2px;
     }
     .usat_gallery_buttons {
+        padding-top: 0;
     width: 30%;
     height: 42px;
     display: flex;

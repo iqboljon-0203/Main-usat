@@ -147,6 +147,7 @@
    
 }
 .usat_numbers_title {
+    padding-top: 20px;
     font-size: 44px;
     font-weight: 700;
     line-height: 43.2px;
@@ -189,7 +190,7 @@
     font-weight: 700;
     line-height: 43.2px;
     letter-spacing: -0.02em;
-    padding-top: 30px;
+    padding-top: 20px;
     padding-bottom: 20px;
 }
 .usat_numbers_text {
@@ -300,7 +301,6 @@
     
 }
 .usat_numbers_item_number {
-  
     font-size: 90px;
     font-weight: 500;
     line-height: 115.2px;
@@ -308,18 +308,18 @@
    
 }
 .usat_numbers_title {
-    font-size: 32px;
+    padding-top:0px;
+    font-size: 24px;
     font-weight: 700;
-    line-height: 35.2px;
+    line-height: 33.2px;
     letter-spacing: -0.02em;
-    padding-top: 20px;
     padding-bottom: 10px;
 }
 .usat_numbers_text {
     width: 100%;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 400;
-    line-height: 24.6px;
+    line-height: 22.6px;
     margin-bottom: 20px;
 }
 }
