@@ -41,11 +41,11 @@ export default function App() {
                         spaceBetween: 20,
                     },
                     // Qo'shimcha breakpointlar
-                    545: {
+                    645: {
                         slidesPerView: 2,
                         spaceBetween: 20,
                     },
-                    480: {
+                    640: {
                         slidesPerView: 1,
                         spaceBetween: 20,
                     },

@@ -173,7 +173,7 @@
     .usat_numbers_item_text {
     font-size: 22px;
     font-weight: 400;
-    line-height: 33.6px;
+    line-height: 30.6px;
     
 }
 .usat_numbers_item_number {
@@ -189,12 +189,15 @@
     font-weight: 700;
     line-height: 43.2px;
     letter-spacing: -0.02em;
+    padding-top: 30px;
+    padding-bottom: 20px;
 }
 .usat_numbers_text {
     width: 70%;
     font-size: 22px;
     font-weight: 400;
     line-height: 33.6px;
+    margin-bottom: 30px;
 }
 }
 @media screen and (max-width: 1000px) {
@@ -227,12 +230,15 @@
     font-weight: 700;
     line-height: 43.2px;
     letter-spacing: -0.02em;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 .usat_numbers_text {
     width: 85%;
     font-size: 22px;
     font-weight: 400;
-    line-height: 33.6px;
+    line-height: 28.6px;
+    margin-bottom: 30px;
 }
 }
 @media screen and (max-width: 750px) {
@@ -265,12 +271,15 @@
     font-weight: 700;
     line-height: 43.2px;
     letter-spacing: -0.02em;
+    padding-top: 20px;
+    padding-bottom: 10px;
 }
 .usat_numbers_text {
     width: 90%;
     font-size: 22px;
     font-weight: 400;
-    line-height: 33.6px;
+    line-height: 26.6px;
+    margin-bottom: 20px;
 }
 }
 @media screen and (max-width: 600px) {
@@ -301,13 +310,16 @@
 .usat_numbers_title {
     font-size: 32px;
     font-weight: 700;
-    line-height: 43.2px;
+    line-height: 35.2px;
     letter-spacing: -0.02em;
+    padding-top: 20px;
+    padding-bottom: 10px;
 }
 .usat_numbers_text {
-    width: 90%;
+    width: 100%;
     font-size: 18px;
     font-weight: 400;
-    line-height: 33.6px;
+    line-height: 24.6px;
+    margin-bottom: 20px;
 }
 }

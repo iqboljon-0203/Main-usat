@@ -22,3 +22,64 @@
     text-transform: uppercase;
     color: #21466d;
 }
+
+@media screen and (max-width: 1600px) {
+    .partners_title {
+    font-size: 44px;
+    font-weight: 700;
+    line-height: 43.2px;
+    letter-spacing: -0.02em;
+
+    margin-bottom: 40px;
+}
+}
+@media screen and (max-width: 1200px) {
+    .partners_title {
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 40.2px;
+    letter-spacing: -0.02em;
+
+    margin-bottom: 40px;
+}
+}
+@media screen and (max-width: 1000px) {
+    .partners_title {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 36.2px;
+    letter-spacing: -0.02em;
+
+    margin-bottom: 30px;
+}
+}
+@media screen and (max-width: 800px) {
+    .partners_title {
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 32.2px;
+    letter-spacing: -0.02em;
+
+    margin-bottom: 20px;
+}
+}
+@media screen and (max-width: 600px) {
+    .partners_title {
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 28.2px;
+    letter-spacing: -0.02em;
+
+    margin-bottom: 10px;
+}
+}
+@media screen and (max-width: 550px) {
+    .partners_title {
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 28.2px;
+    letter-spacing: -0.02em;
+
+    margin-bottom: 0px;
+}
+}

@@ -9,7 +9,7 @@ const UsatGallery = ({child}) => {
   return (
       <div
             id='news'
-          style={child ? { padding: '0px 0px' } : { padding: '0px 20px' }}
+          style={child ? { padding: '0px 20px' } : { padding: '0px 20px' }}
           className="news"
       >
           <div className="news_container">

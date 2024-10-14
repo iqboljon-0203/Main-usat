@@ -15,7 +15,7 @@ const MainFooter = ({child}) => {
   return (
       <div
           id="contact"
-          style={child ? { padding: '20px 0px 0px 0px' } : { padding: '20px 20px' }}
+          style={child ? { padding: '20px 20px 20px 20px' } : { padding: '20px 20px' }}
           className="main_footer"
       >
           <div className="main_footer_container">

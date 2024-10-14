@@ -17,6 +17,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 40px;
 }
 .slider_partners_item_new img{
   padding-top: 50px;
