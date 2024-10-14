@@ -199,6 +199,9 @@
     
 }
 @media screen and (max-width: 960px) {
+    .navbar{
+        padding: 20px 0px;
+    }
     .navbar header ul:nth-child(3){ 
         display: none;
     }
@@ -218,6 +221,9 @@
     
 }
 @media screen and (max-width: 880px) {
+    .navbar{
+        padding: 20px 0px;
+    }
     .navbar header ul:nth-child(3){ 
         display: none;
     }
@@ -236,6 +242,9 @@
     
 }
 @media screen and (max-width: 700px) {
+    .navbar{
+        padding: 20px 0px;
+    }
     .navbar header ul:nth-child(3){ 
         display: none;
     }
@@ -252,6 +261,9 @@
         
 }
 @media screen and (max-width: 900px) {
+    .navbar{
+        padding: 20px 0px;
+    }
     .navbar header ul:nth-child(3){ 
         display: none;
     }
@@ -267,6 +279,9 @@
         
 }
 @media screen and (max-width: 650px) {
+    .navbar{
+        padding: 20px 0px;
+    }
     .navbar header ul:nth-child(3){ 
         display: none;
     }
@@ -282,6 +297,9 @@
         
 }
 @media screen and (max-width: 480px) {
+    .navbar{
+        padding: 20px 0px;
+    }
     .navbar header ul:nth-child(3){ 
         display: none;
     }
@@ -500,6 +518,9 @@ a.navbar{
     
 }
 @media screen and (max-width: 960px) {
+    .navbar{
+        padding: 20px 0px;
+    }
     .navbar header ul:nth-child(3){ 
         display: none;
     }
@@ -519,6 +540,9 @@ a.navbar{
     
 }
 @media screen and (max-width: 880px) {
+    .navbar{
+        padding: 10px 0px;
+    }
     .navbar header ul:nth-child(3){ 
         display: none;
     }
@@ -537,6 +561,9 @@ a.navbar{
     
 }
 @media screen and (max-width: 700px) {
+    .navbar{
+        padding: 10px 0px;
+    }
     .navbar header ul:nth-child(3){ 
         display: none;
     }
@@ -553,6 +580,9 @@ a.navbar{
         
 }
 @media screen and (max-width: 900px) {
+    .navbar{
+        padding: 10px 0px;
+    }
     .navbar header ul:nth-child(3){ 
         display: none;
     }
@@ -568,6 +598,9 @@ a.navbar{
         
 }
 @media screen and (max-width: 650px) {
+    .navbar{
+        padding: 10px 0px;
+    }
     .navbar header ul:nth-child(3){ 
         display: none;
     }
@@ -584,6 +617,9 @@ a.navbar{
         
 }
 @media screen and (max-width: 480px) {
+    .navbar{
+        padding: 10px 0px;
+    }
     .navbar header{
         padding-left: 10px;
         padding-right: 10px;
