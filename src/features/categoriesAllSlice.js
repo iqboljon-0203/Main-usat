@@ -4,11 +4,11 @@ const apiUrl = import.meta.env.VITE_API_BASE_URL;
 const secretKey=import.meta.env.VITE_SECRET_KEY;
 
 // GET so'rovini createAsyncThunk bilan yaratamiz
-export const fetchData = createAsyncThunk(
+export const fetchAllCategories = createAsyncThunk(
     'data/fetchData',
     async ({language }, { rejectWithValue }) => {
         try {
-            const response = await axios.get(`${apiUrl}/news/latest/`, {
+            const response = await axios.get(`${apiUrl}/categories/all/`, {
                 headers: {
                     'X-Secret': secretKey,
                     'Accept-Language': language,
@@ -23,7 +23,7 @@ export const fetchData = createAsyncThunk(
 )
 
 // slice yaratamiz
-const dataSlice = createSlice({
+const dataCategoriesSlice = createSlice({
     name: 'data',
     initialState: {
         data: null,
@@ -33,19 +33,19 @@ const dataSlice = createSlice({
     reducers: {},
     extraReducers: (builder) => {
         builder
-            .addCase(fetchData.pending, (state) => {
+            .addCase(fetchAllCategories.pending, (state) => {
                 state.loading = true
                 state.error = null
             })
-            .addCase(fetchData.fulfilled, (state, action) => {
+            .addCase(fetchAllCategories.fulfilled, (state, action) => {
                 state.loading = false
                 state.data = action.payload
             })
-            .addCase(fetchData.rejected, (state, action) => {
+            .addCase(fetchAllCategories.rejected, (state, action) => {
                 state.loading = false
                 state.error = action.payload || 'Something went wrong'
             })
     },
 })
 
-export default dataSlice.reducer
+export default dataCategoriesSlice.reducer

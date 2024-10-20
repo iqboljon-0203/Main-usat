@@ -4,6 +4,7 @@ import NextIcon from "../../../assets/logos/right_another.png";
 import PrevIcon from '../../../assets/logos/left_another.png'
 import SliderNews from '../../../components/SliderNews/Slider.jsx';
 import { useTranslation } from 'react-i18next';
+import { Link } from 'react-router-dom';
 const UsatGallery = ({child}) => {
     const {t}=useTranslation();
   return (
@@ -14,7 +15,7 @@ const UsatGallery = ({child}) => {
       >
           <div className="news_container">
               <div className="news_top">
-                  <h2 className="news_title">{child?t('other_news'):t('news_title')}</h2>
+                  <h2 className="news_title"><Link style={{textDecoration:"underline solid #21466D"}} to="/news">{child?t('other_news'):t('news_title')}</Link></h2>
                   <div className="news_buttons">
                       <div className="news_button_left">
                           <img src={PrevIcon} alt="Next icon" />

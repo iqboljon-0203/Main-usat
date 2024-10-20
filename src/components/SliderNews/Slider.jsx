@@ -53,6 +53,7 @@ export default function App() {
             >
                 {data &&
                     data.map((item) => (
+                        
                         <SwiperSlide style={{height:"auto"}} key={item.id}>
                             <li className="slider_news_item">
                                 <div className="slider_news_img">
@@ -68,14 +69,14 @@ export default function App() {
                                             textDecoration:
                                                 'underline solid #21466D',
                                         }}
-                                        to={`/news/${item.id}`}
+                                        to={`/news/${item.slug}`}
                                     >
                                         <h1 className="slider_news_info_title">
                                             {item.title}
                                         </h1>
                                     </Link>
                                     <p className="slider_news_info_text">
-                                        {item.summary
+                                        {item&&item?.summary
                                             .split(' ')
                                             .slice(0, 25)
                                             .join(' ') + '...'}

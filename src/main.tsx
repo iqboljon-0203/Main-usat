@@ -10,6 +10,8 @@ import App from './App'
 import store from "./app/store";
 import { Provider} from 'react-redux';
 import NewsPage from './pages/News/News';
+import NewsCategories from './pages/NewsCategories/App.jsx';
+import NewsItem from "./pages/NewsItem/App.jsx";
 const router = createBrowserRouter([
     {
         path: '/',
@@ -28,9 +30,18 @@ const router = createBrowserRouter([
         element: <div>Dashboard</div>,
     },
     {
-        path: '/news/:id',
+        path: '/news/:slug/:name',
         element:<NewsPage></NewsPage>,
     },
+    {
+        path: '/news',
+        element:<NewsCategories></NewsCategories>,
+    },
+    {
+        path: '/news/:slug',
+        element:<NewsItem></NewsItem>
+    },
+   
 ])
 ReactDOM.createRoot(document.getElementById('root')!).render(
     <Provider store={store}>

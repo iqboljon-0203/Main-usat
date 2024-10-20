@@ -4,12 +4,12 @@ const secretKey = import.meta.env.VITE_SECRET_KEY
 const apiUrl = import.meta.env.VITE_API_BASE_URL;
 
 // GET so‘rov uchun createAsyncThunk funksiyasi
-export const fetchNews = createAsyncThunk(
+export const fetchCategory = createAsyncThunk(
     'news/fetchNews',
     async ({ slug,language }, { rejectWithValue }) => {
         try {
             const response = await axios.get(
-                `${apiUrl}/news/detail/${slug}/`,
+                `${apiUrl}/categories/${slug}/`,
                 {
                     headers: {
                         'Accept-Language': language, // tilni yuborish
@@ -26,29 +26,29 @@ export const fetchNews = createAsyncThunk(
 )
 
 // news slice
-const newsSlice = createSlice({
-    name: 'news',
+const categorySlice = createSlice({
+    name: 'category',
     initialState: {
-        newsItem: null, // yangilik ma'lumotlarini saqlash
+        categoryItem: null, // yangilik ma'lumotlarini saqlash
         loading: false, // yuklanish holati
         error: null, // xatolik holati
     },
     reducers: {},
     extraReducers: (builder) => {
         builder
-            .addCase(fetchNews.pending, (state) => {
+            .addCase(fetchCategory.pending, (state) => {
                 state.loading = true
                 state.error = null
             })
-            .addCase(fetchNews.fulfilled, (state, action) => {
+            .addCase(fetchCategory.fulfilled, (state, action) => {
                 state.loading = false
-                state.newsItem = action.payload // muvaffaqiyatli yuklanish
+                state.categoryItem = action.payload // muvaffaqiyatli yuklanish
             })
-            .addCase(fetchNews.rejected, (state, action) => {
+            .addCase(fetchCategory.rejected, (state, action) => {
                 state.loading = false
                 state.error = action.payload // xatolikni qayd qilish
             })
     },
 })
 
-export default newsSlice.reducer
+export default categorySlice.reducer
