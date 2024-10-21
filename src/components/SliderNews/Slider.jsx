@@ -69,14 +69,14 @@ export default function App() {
                                             textDecoration:
                                                 'underline solid #21466D',
                                         }}
-                                        to={`/news/${item.slug}`}
+                                        to={`/news/${item.category&&item.category?.slug}/${item.slug}`}
                                     >
                                         <h1 className="slider_news_info_title">
                                             {item.title}
                                         </h1>
                                     </Link>
                                     <p className="slider_news_info_text">
-                                        {item&&item?.summary
+                                        {item.summary&&item?.summary
                                             .split(' ')
                                             .slice(0, 25)
                                             .join(' ') + '...'}

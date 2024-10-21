@@ -7,8 +7,12 @@ import MainFooter from '../../customComponents/customComponents/MainFooter/App';
 import { useEffect } from "react";
 import { useSelector,useDispatch } from "react-redux";
 import { fetchAllCategories } from "../../features/categoriesAllSlice";
+import { useLocation } from "react-router-dom";
 const NewsCategories = () => {
   const { t } = useTranslation();
+  const location=useLocation();
+  console.log(location.pathname);
+  
     const languageNew = useSelector((state) => state.acceptLanguage.language);
     const dispatch = useDispatch()
     useEffect(() => {
@@ -17,11 +21,12 @@ const NewsCategories = () => {
         }))
     }, [dispatch,languageNew])
     const { data } = useSelector((state) => state.allCategories)
+    console.log(data);
     
   return (
     <div className="newsCategories">
       <Navbar child="true"></Navbar>
-      <p  className="newsItem_path">
+      <p  className="newsCategories_path">
         <Link to="/">{t("sahifa")} </Link>  <div
       style={{
         display: 'flex',
@@ -60,40 +65,40 @@ const NewsCategories = () => {
             <div className="newsCategories_list_item_content_left">
               <div className="newsCategories_list_item_content_left_wrapper">
                 <h3 className="">
-                    {item&&item?.news_list[0]?.title}
+                  <Link style={{textDecoration:"underline solid #21466D"}} to={`${location.pathname}/${item&&item.slug}/${item.news_list&&item.news_list.length>0&&item?.news_list[0]?.slug}`}>{item.news_list&&item.news_list.length>0&&item.news_list[0].title}</Link>    
                 </h3>
                 <p className="">
-                    {item&&item?.news_list[0]?.summary}
+                    {`${item.news_list&&item.news_list.length>0&&item?.news_list[0]?.summary.split(" ").slice(0, 20).join(" ")}...`}
                 </p>
                 <div>
-                  <h4><Link to={`/news/${item.slug}`}>{item&&item?.news_list[0]?.category.title}</Link></h4>
+                  <h4><Link to={`/news/${item.slug}`}>{item.news_list&&item.news_list.length>0&&item?.news_list[0]?.category.title}</Link></h4>
                   
-                  <p>{item&&item?.news_list[0]?.created_at.slice(0, 10)}</p>
+                  <p>{item.news_list&&item.news_list.length>0&&item?.news_list[0]?.created_at.slice(0, 10)}</p>
                 </div>
               </div>
               <div className="newsCategories_list_item_content_left_img">
-                <img src={item&&item?.news_list[0]?.photo} alt="Students image" />
+                <img src={item.news_list&&item.news_list.length>0&&item?.news_list[0]?.photo} alt="Students image" />
               </div>
             </div>
             <div className="newsCategories_list_item_content_right">
              
-              {item&&item?.news_list.slice(1).map((item) => {
+              {item.news_list&&item.news_list.length>0&&item?.news_list.slice(1).map((child) => {
                 return (
                      <div className="newsCategories_list_item_content_right_item">
                 <div className="newsCategories_list_item_content_right_item_img">
-                  <img src={item&&item.photo} alt="Students image" />
+                  <img src={child&&child.photo} alt="Students image" />
                 </div>
                 <div className="newsCategories_list_item_content_right_item_wrapper">
                   {" "}
                   <h3 className="">
-                    {item&&item.title}
+                    <Link style={{textDecoration:"underline solid #21466D"}} to={`${location.pathname}/${item&&item.slug}/${child.slug}`}>{child&&child.title}</Link>
                   </h3>
                   <p className="">
-                    {item&&item.summary}
+                    {`${child&&child.summary.split(" ").slice(0, 25).join(" ")}...`}
                   </p>
                   <div>
-                    <h4><Link to={`/news/${item.slug}`}>{item&&item.category.title}</Link></h4>
-                    <p>{item&&item.created_at.slice(0, 10)}</p>
+                    <h4><Link to={`/news/${item.slug}`}>{child&&child.category.title}</Link></h4>
+                    <p>{child&&child.created_at.slice(0, 10)}</p>
                   </div>
                 </div>
               </div>
@@ -101,9 +106,13 @@ const NewsCategories = () => {
               })}
             </div>
           </div>
+          <Link to={`/news/${item.slug}`}>
+        <button className="newsCategories_list_button">Barcha yangiliklarni ko’rish</button>
+        </Link>
         </li>
             )
         })}
+        
         
       </ul>
        <MainFooter child="true"></MainFooter>
