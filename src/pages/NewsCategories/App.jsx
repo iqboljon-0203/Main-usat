@@ -27,24 +27,11 @@ const NewsCategories = () => {
     <div className="newsCategories">
       <Navbar child="true"></Navbar>
       <p  className="newsCategories_path">
-        <Link to="/">{t("sahifa")} </Link>  <div
-      style={{
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        width: '20px',
-        height: '20px', // Butun ekran bo'yi o'lchov uchun
-        margin:"0px 10px",
-      }}
+        <Link to="/">{t("sahifa")} </Link>  <div className="dot_parent"
+      
     >
-      <div
-        style={{
-          width: '6px',
-          height: '6px',
-          backgroundColor: '#21466D',
-          borderRadius: '50%',
-          
-        }}
+      <div className="dot_child"
+        
       ></div>
     </div><span>Yangiliklar</span> 
         
