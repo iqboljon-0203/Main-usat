@@ -30,41 +30,16 @@ const NewsItem = () => {
       <Navbar child="true"></Navbar>
       <p  className="newsItem_path">
         <Link to="/">{t("sahifa")} </Link>  <div
-      style={{
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        width: '20px',
-        height: '20px', // Butun ekran bo'yi o'lchov uchun
-        margin:"0px 10px",
-      }}
+      className="dot_parent"
     >
       <div
-        style={{
-          width: '6px',
-          height: '6px',
-          backgroundColor: '#21466D',
-          borderRadius: '50%',
-          
-        }}
+       className="dot_child"
       ></div>
     </div><span><Link to={"/news"}>Yangiliklar</Link></span>  <div
-      style={{
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        width: '20px',
-        height: '20px', // Butun ekran bo'yi o'lchov uchun
-        margin:"0px 10px",
-      }}
+      className="dot_parent"
     >
       <div
-        style={{
-          width: '6px',
-          height: '6px',
-          backgroundColor: '#21466D',
-          borderRadius: '50%',
-        }}
+        className="dot_child"
       ></div>
     </div>{" "}
         <span>{categoryItem&&categoryItem.title}</span>
@@ -84,7 +59,7 @@ const NewsItem = () => {
                <Link style={{textDecoration:"underline solid #21466D"}} to={`${location.pathname}/${item&&item.slug}`}>{item&&item.title}</Link>
               </h3>
               <p className="">
-                {item&&item.summary}
+                {`${item&&item.summary.split(" ").slice(0, 20).join(" ")}...`}
               </p>
               <div>
                 <h4>{item&&item.category.title}</h4>
