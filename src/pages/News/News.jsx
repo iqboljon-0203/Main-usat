@@ -26,7 +26,7 @@ const NewsPage = () => {
             })
         )
     }, [dispatch, name,languageNew])
-    const { newsItem} = useSelector((state) => state.getNews)
+    const {newsItem} = useSelector((state) => state.getNews)
 
      
   return (
@@ -39,7 +39,7 @@ const NewsPage = () => {
       <div
         className='dot_child'
       ></div>
-    </div><span><Link to={'/news'}>Yangiliklar</Link></span>  <div
+    </div><span><Link to={'/news'}>Yangiliklar</Link></span><div
       className='dot_parent'
     >
       <div
@@ -63,8 +63,7 @@ const NewsPage = () => {
                       {newsItem && newsItem?.created_at?.slice(0, 10)}
                   </p>
                   <p className="newsPage_content_info_author">
-                      {t('author')} : {newsItem && newsItem?.author?.first_name}{' '}
-                      {newsItem && newsItem?.author?.last_name}
+                      {newsItem && newsItem?.category?.title}
                   </p>
               </div>
               <img

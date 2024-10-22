@@ -25,11 +25,11 @@ export default function App() {
       } else if (window.innerWidth <= 768) {
         setSwiperHeight(250);
       }else if (window.innerWidth <= 1000) {
-        setSwiperHeight(350);
-      } else if (window.innerWidth <= 1500) {
         setSwiperHeight(450);
-      } else {
+      } else if (window.innerWidth <= 1500) {
         setSwiperHeight(650);
+      } else {
+        setSwiperHeight(850);
       }
     };
 
