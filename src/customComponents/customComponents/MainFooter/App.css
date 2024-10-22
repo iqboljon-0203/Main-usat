@@ -130,6 +130,15 @@ padding-left: 40px;
 .footer_links:hover{
     color: #FFC82A;
 }
+@media screen and (min-width:1930px){
+    .main_footer{
+        max-width: 1940px;
+        margin: 0 auto;
+        padding: 20px 0px;
+    }
+    
+    
+}
 @media screen and (max-width: 1600px) {
     .main_footer_data_list_item_title {
         font-size: 28px;

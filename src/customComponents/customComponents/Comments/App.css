@@ -48,7 +48,14 @@
     text-align: left;
     color: #21466d59;
 }
-
+@media screen and (min-width:1930px){
+    .comments{
+        max-width: 1910px;
+        margin: 0 auto;
+        padding: 20px 0px;
+    }
+    
+}
 @media screen and (max-width: 1770px) {
     
     .comments_title {

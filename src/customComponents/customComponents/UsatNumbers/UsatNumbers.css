@@ -82,6 +82,14 @@
     text-align: left;
     color: #21466d;
 }
+@media screen and (min-width:1930px){
+    .usat_numbers{
+        max-width: 1930px;
+        margin: 0 auto;
+        padding: 20px 0px;
+    }
+    
+}
 
 @media screen and (max-width: 1590px) {
     .usat_numbers_item {

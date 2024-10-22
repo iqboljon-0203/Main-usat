@@ -62,6 +62,16 @@
 
     color: rgba(255, 255, 255, 0.5);
 }
+@media screen and (min-width:1930px){
+    .magistr_info{
+        max-width: 1920px;
+        margin: 0 auto;
+    }
+    .magistr_info_list{
+        padding: 0px 0px;
+    }
+    
+}
 @media screen and (max-width: 1770px) {
     .magistr_info_item_new {
         padding-top: 20px;

@@ -61,6 +61,16 @@
     margin-bottom: 30px;
     color: rgba(33, 70, 109, 0.35);
 }
+@media screen and (min-width:1930px){
+    .magistr{
+        max-width: 1920px;
+        margin: 0 auto;
+    }
+    .magistr_list{
+        padding: 0px 0px;
+    }
+    
+}
 @media screen and (max-width: 1770px) {
     .inner_item {
         width: 80%;

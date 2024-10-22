@@ -1,5 +1,6 @@
 .info {
     width: 100%;
+    
     margin-bottom: 20px;
 }
 .info_list {
@@ -62,6 +63,16 @@
     margin-bottom: 20px;
 
     color: rgba(255, 255, 255, 0.5);
+}
+@media screen and (min-width:1930px){
+    .info{
+        max-width: 1920px;
+        margin: 0 auto;
+        margin-bottom: 20px;
+    }
+    .info_list{
+        padding: 0px 0px;
+    }
 }
 @media screen and (max-width: 1770px) {
     .info_item_new {

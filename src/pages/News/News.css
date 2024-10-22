@@ -1,6 +1,8 @@
 .newsPage {
     background-color: rgba(245, 246, 250, 1);
     width: 100%;
+    max-width: 1920px;
+    margin: 0 auto;
     height: auto;
 }
 .newsPage_path {
