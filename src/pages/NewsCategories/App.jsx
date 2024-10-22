@@ -33,10 +33,10 @@ const NewsCategories = () => {
       <div className="dot_child"
         
       ></div>
-    </div><span>Yangiliklar</span> 
+    </div><span>{t("news_path")}</span> 
         
       </p>
-      <h2 className="newsCategories_title">Universitet yangiliklari</h2>
+      <h2 className="newsCategories_title">{t("news_university")}</h2>
       <ul className="newsCategories_list">
         {data&&data.map((item) => {
             
@@ -94,7 +94,7 @@ const NewsCategories = () => {
             </div>
           </div>
           <Link to={`/news/${item.slug}`}>
-        <button className="newsCategories_list_button">Barcha yangiliklarni ko’rish</button>
+        <button className="newsCategories_list_button">{t("view_all_news")}</button>
         </Link>
         </li>
             )

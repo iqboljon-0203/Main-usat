@@ -35,7 +35,7 @@ const NewsItem = () => {
       <div
        className="dot_child"
       ></div>
-    </div><span><Link to={"/news"}>Yangiliklar</Link></span>  <div
+    </div><span><Link to={"/news"}>{t("news_path")}</Link></span>  <div
       className="dot_parent"
     >
       <div

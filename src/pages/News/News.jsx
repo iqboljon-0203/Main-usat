@@ -39,7 +39,7 @@ const NewsPage = () => {
       <div
         className='dot_child'
       ></div>
-    </div><span><Link to={'/news'}>Yangiliklar</Link></span><div
+    </div><span><Link to={'/news'}>{t("news_path")}</Link></span><div
       className='dot_parent'
     >
       <div
@@ -63,7 +63,8 @@ const NewsPage = () => {
                       {newsItem && newsItem?.created_at?.slice(0, 10)}
                   </p>
                   <p className="newsPage_content_info_author">
-                      {newsItem && newsItem?.category?.title}
+                    <Link to={`/news/${newsItem && newsItem?.category?.slug}`}>{newsItem && newsItem?.category?.title}</Link>
+                      
                   </p>
               </div>
               <img
@@ -76,12 +77,12 @@ const NewsPage = () => {
                <div className='newsPage_content_text'  dangerouslySetInnerHTML={{ __html: newsItem && newsItem.content2 }} />
                <div className='newsPage_content_buttons'>
                     <div className='newsPage_content_buttons_left'>
-                        <button><img src={ShareIcon} alt="Share icon" />Ulashish</button>
-                        <button><img src={CopyIcon} alt="Copy icon" />Yangilikdan nusxa olish</button>
+                        <button><img src={ShareIcon} alt="Share icon" />{t("share_news")}</button>
+                        <button><img src={CopyIcon} alt="Copy icon" />{t("copy_news")}</button>
                     </div>
                     <button>
                         <img src={PrintIcon} alt="Print icon" />
-                        Chop etish
+                       {t("print_news")}
                     </button>
                </div>
           </div>
