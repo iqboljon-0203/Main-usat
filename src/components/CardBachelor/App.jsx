@@ -10,7 +10,7 @@ const FinancialTechnologies =React.memo(({title,priceKun,priceKech,priceSirt}) =
             id="card"
             className="w-full flex flex-col justify-center bg-white rounded-3xl  px-8 pt-12 h-full"
         >
-            <div className="text-start h-1/5 flex  items-center justify-start">
+            <div className="text-start h-1/5 flex  items-center justify-start md:mt-2 mt-8">
                 <h1
                     id="card_title"
                     className="text-5xl font-bold leading-[2.90rem] text-left text-cyan-900/[1] mb-4 uppercase"
