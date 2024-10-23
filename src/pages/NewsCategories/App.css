@@ -752,9 +752,24 @@ display: none;
     border-radius: 30px;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     gap: 20px;
     padding-top: 40px;
 
+}
+.newsCategories_list_item_content_left_img{
+     position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%;
+}
+.newsCategories_list_item_content_left_img img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 .newsCategories_list_item_content_right {
     width: 100%;
@@ -826,11 +841,7 @@ display: none;
     width: 100%;
     display: flex;
 }
-.newsCategories_list_item_content_left_img {
-    width: 100%;
-    height: 320px;
-    margin-bottom: 0;
-}
+
 .newsCategories_list_item_content_right_item_wrapper>div>h4 {
     font-size: 22px;
     font-weight: 300;
@@ -962,11 +973,7 @@ display: none;
     width: 100%;
     display: flex;
 }
-.newsCategories_list_item_content_left_img {
-    width: 100%;
-    height: 320px;
-    margin-bottom: 0;
-}
+
 .newsCategories_list_item_content_right_item_wrapper>div>h4 {
     font-size: 20px;
     font-weight: 300;
@@ -1097,11 +1104,7 @@ display: none;
     width: 100%;
     display: flex;
 }
-.newsCategories_list_item_content_left_img {
-    width: 100%;
-    height: 320px;
-    margin-bottom: 0;
-}
+
 .newsCategories_list_item_content_right_item_wrapper>div>h4 {
     font-size: 18px;
     font-weight: 300;
@@ -1209,11 +1212,7 @@ display: none;
     width: 100%;
     display: flex;
 }
-.newsCategories_list_item_content_left_img {
-    width: 100%;
-    height: 320px;
-    margin-bottom: 0;
-}
+
 .newsCategories_list_item_content_right_item_wrapper>div>h4 {
     font-size: 18px;
     font-weight: 300;
@@ -1362,11 +1361,7 @@ display: none;
     width: 100%;
     display: flex;
 }
-.newsCategories_list_item_content_left_img {
-    width: 100%;
-    height: 220px;
-    margin-bottom: 0;
-}
+
 .newsCategories_list_item_content_right_item_wrapper>div>h4 {
     font-size: 17px;
     font-weight: 300;
@@ -1515,11 +1510,7 @@ display: none;
     width: 100%;
     display: flex;
 }
-.newsCategories_list_item_content_left_img {
-    width: 100%;
-    height: 220px;
-    margin-bottom: 0;
-}
+
 .newsCategories_list_item_content_right_item_wrapper>div>h4 {
     font-size: 15px;
     font-weight: 300;
@@ -1670,15 +1661,20 @@ display: none;
     width: 100%;
     display: flex;
 }
-.newsCategories_list_item_content_left_img {
-    width: 100%;
-    height: 280px;
-    margin-bottom: 0;
-}
+
 .newsCategories_list_item_content_right_item_img{
-     width: 100%;
-    height: 280px;
-    margin-bottom: 0;
+     position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%; /* 16:9 nisbati uchun (9 / 16 = 0.5625) */
+}
+.newsCategories_list_item_content_right_item_img img{
+     position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 .newCategories_list_item_top{
     display: flex;
@@ -1871,16 +1867,8 @@ display: none;
     width: 100%;
     display: flex;
 }
-.newsCategories_list_item_content_left_img {
-    width: 100%;
-    height: 230px;
-    margin-bottom: 0;
-}
-.newsCategories_list_item_content_right_item_img{
-     width: 100%;
-    height: 230px;
-    margin-bottom: 0;
-}
+
+
 .newCategories_list_item_top{
     display: flex;
     align-items: center;
@@ -2028,16 +2016,8 @@ display: none;
      border-radius: 50%;
           
 }
-.newsCategories_list_item_content_left_img {
-    width: 100%;
-    height: 180px;
-    margin-bottom: 0;
-}
-.newsCategories_list_item_content_right_item_img{
-     width: 100%;
-    height: 180px;
-    margin-bottom: 0;
-}
+
+
 
     .newsCategories_title{
         width: 90%;

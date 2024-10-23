@@ -40,5 +40,5 @@ module.exports = {
         },
     },
     darkMode: 'class',
-    plugins: [require('tailwindcss-animate'), nextui()],
+    plugins: [require('tailwindcss-animate',require('@tailwindcss/aspect-ratio'),), nextui()],
 }

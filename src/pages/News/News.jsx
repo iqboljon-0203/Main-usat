@@ -67,11 +67,13 @@ const NewsPage = () => {
                       
                   </p>
               </div>
-              <img
-                  className="newsPage_content_img"
+              <div className="relative w-full pb-[56.25%]">
+                   <img
+                  className="absolute top-0 left-0 rounded-xl w-full h-full object-cover"
                   src={newsItem && newsItem.photo}
                   alt="News image"
-              />
+                />
+              </div>
               <div className='newsPage_content_text'  dangerouslySetInnerHTML={{ __html: newsItem && newsItem.content }} />
                <SliderNewsDetail></SliderNewsDetail>
                <div className='newsPage_content_text'  dangerouslySetInnerHTML={{ __html: newsItem && newsItem.content2 }} />

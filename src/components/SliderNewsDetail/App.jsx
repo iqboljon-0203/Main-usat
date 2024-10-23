@@ -18,21 +18,18 @@ export default function App() {
     const { newsItem} = useSelector((state) => state.getNews)
     const [swiperHeight, setSwiperHeight] = useState(650);
     const [littleSwiperHeight,setLittleSwiperHeight]=useState(188)
+    console.log(littleSwiperHeight);
+    
      useEffect(() => {
     const handleResize = () => {
-      if (window.innerWidth <= 480) {
-        setSwiperHeight(180);
-      } else if (window.innerWidth <= 768) {
-        setSwiperHeight(250);
-      }else if (window.innerWidth <= 1000) {
-        setSwiperHeight(450);
-      } else if (window.innerWidth <= 1500) {
-        setSwiperHeight(650);
-      } else {
-        setSwiperHeight(850);
+      if (window.innerWidth <= 700) {
+        setSwiperHeight(((window.innerWidth-40)/16)*9);
+      }else if(window.innerWidth<=850){
+        setSwiperHeight(((window.innerWidth*0.9)/16)*9);
+      }else{
+        setSwiperHeight(((window.innerWidth*0.8)/16)*9);
       }
     };
-
     // Call handler once to set initial size
     handleResize();
 
@@ -44,16 +41,15 @@ export default function App() {
   }, []);
   useEffect(() => {
     const handleResize = () => {
-      if (window.innerWidth <= 480) {
-        setLittleSwiperHeight(100);
-      } else if (window.innerWidth <= 768) {
-        setLittleSwiperHeight(130);
-      }else if (window.innerWidth <= 1000) {
-        setLittleSwiperHeight(150);
-      } else if (window.innerWidth <= 1500) {
-        setLittleSwiperHeight(170);
-      } else {
-        setLittleSwiperHeight(188);
+     if (window.innerWidth <= 700) {
+        setLittleSwiperHeight(((window.innerWidth-40)/64)*9);
+      }else if(window.innerWidth<=850){
+        setLittleSwiperHeight(((window.innerWidth*0.9)/64)*9);
+      }else{
+        
+        setLittleSwiperHeight(((window.innerWidth*0.8)/64)*9);
+        
+        
       }
     };
 
@@ -74,6 +70,7 @@ export default function App() {
           '--swiper-navigation-color': '#fff',
           '--swiper-pagination-color': '#fff',
           height: `${swiperHeight}px`,
+          borderRadius:"10px",
         }}
        
         loop={true}
@@ -98,7 +95,7 @@ export default function App() {
         watchSlidesProgress={true}
         modules={[FreeMode, Navigation, Thumbs]}
         className="myNewsSwiper"
-        style={{height: `${littleSwiperHeight}px`}}
+        style={{height: `${littleSwiperHeight+20}px`,borderRadius:"10px",}}
       >
         {newsItem&&newsItem?.photos?.map((item) => (
             <SwiperSlide>

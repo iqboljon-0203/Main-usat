@@ -10,7 +10,7 @@ const FinancialTechnologies =React.memo(({title,priceKun,priceKech,priceSirt}) =
             id="card"
             className="w-full flex flex-col justify-center bg-white rounded-3xl  px-8 pt-12 h-full"
         >
-            <div className="text-start h-1/5 flex items-center justify-start">
+            <div className="text-start h-1/5 flex  items-center justify-start">
                 <h1
                     id="card_title"
                     className="text-5xl font-bold leading-[2.90rem] text-left text-cyan-900/[1] mb-4 uppercase"
@@ -18,7 +18,7 @@ const FinancialTechnologies =React.memo(({title,priceKun,priceKech,priceSirt}) =
                     {title}
                 </h1>
             </div>
-            <div className="space-y-2 mb-4 h-3/5 flex flex-col justify-center ">
+            <div className="space-y-2 mb-4 h-4/5 flex flex-col justify-center ">
                 <div className="py-6 mb-2">
                     <h2
                         id="card_subtitle"
@@ -106,7 +106,7 @@ const FinancialTechnologies =React.memo(({title,priceKun,priceKech,priceSirt}) =
                     </div>
                 ) : null}
             </div>
-            <div className="text-center pt-10 pb-6 h-1/5">
+            {/* <div className="text-center pt-10 pb-6 h-1/5">
                 <Link to="https://qabul.usat.uz/sign-up?utm_source=web&utm_medium=site&utm_campaign=usatuz">
                     <button
                         id="card_button"
@@ -126,7 +126,7 @@ const FinancialTechnologies =React.memo(({title,priceKun,priceKech,priceSirt}) =
                         </p>
                     </button>
                 </Link>
-            </div>
+            </div> */}
         </div>
     );
 });

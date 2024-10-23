@@ -5,6 +5,7 @@
 .news_container {
     width: 100%;
     border-radius: 30px;
+    margin-top: 20px;
 }
 .news_top {
     width: 100%;
@@ -66,6 +67,7 @@
     .news{
         max-width: 1950px;
         margin: 0 auto;
+        margin-top: 20px;
     }
     
 }

@@ -56,10 +56,11 @@ export default function App() {
                         
                         <SwiperSlide style={{height:"auto"}} key={item.id}>
                             <li className="slider_news_item">
-                                <div className="slider_news_img">
+                                <div style={{paddingTop:"56.25%"}} className="relative w-full mb-5">
                                     <img
                                         loading="lazy"
                                         src={item.photo}
+                                        className='absolute top-0 left-0 rounded-xl w-full h-full object-contain'
                                         alt="News info image"
                                     ></img>
                                 </div>
