@@ -15,7 +15,7 @@ const UsatGallery = ({child}) => {
       >
           <div className="news_container">
               <div className="news_top">
-                  <h2 className="news_title"><Link style={{textDecoration:"underline solid #21466D"}} to="/news">{child?t('other_news'):t('news_title')}</Link></h2>
+                  <h2 className="news_title"><Link style={{textDecoration:"underline solid #21466D"}} to="/news">{child?t('other_news'):t('news_usat')}</Link></h2>
                   <div className="news_buttons">
                       <div className="news_button_left">
                           <img src={PrevIcon} alt="Next icon" />

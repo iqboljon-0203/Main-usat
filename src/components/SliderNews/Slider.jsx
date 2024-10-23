@@ -10,7 +10,9 @@ import { Navigation } from 'swiper/modules';
 import { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import {fetchData} from '../../features/allNewsSlice';
+import { useTranslation } from 'react-i18next'
 export default function App() {
+    const {t}=useTranslation();
     const languageNew = useSelector((state) => state.acceptLanguage.language);
     const dispatch = useDispatch()
     useEffect(() => {
@@ -56,7 +58,8 @@ export default function App() {
                         
                         <SwiperSlide style={{height:"auto"}} key={item.id}>
                             <li className="slider_news_item">
-                                <div style={{paddingTop:"56.25%"}} className="relative w-full mb-5">
+                                <div className='content'>
+                                    <div style={{paddingTop:"56.25%"}} className="relative w-full mb-5">
                                     <img
                                         loading="lazy"
                                         src={item.photo}
@@ -82,7 +85,10 @@ export default function App() {
                                             .slice(0, 25)
                                             .join(' ') + '...'}
                                     </p>
+
                                 </div>
+                                </div>
+                                <Link className='slider_news_info_link' to={"/news"}>{t("news_title")}</Link>          
                             </li>
                         </SwiperSlide>
                     ))}
