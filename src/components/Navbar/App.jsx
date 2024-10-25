@@ -27,11 +27,11 @@ export default function App({child}) {
 
     const menuItems = [
         { label: t('universitet'), section: 'university' },
-        { label: t('natijalar'), section: 'result' },
+        { label: t('qulaylik'), section: 'qulayliklar' },
         { label: t('bakalavr'), section: 'bachelor' },
         { label: t('magistratura'), section: 'magistr' },
-        { label: t('atmosfera'), section: 'atmosphere' },
         { label: t('yangiliklar'), section: 'news' },
+        { label: t('library'), section: 'library' },
         { label: t("bog'lanish"), section: 'contact' },
     ]
 
@@ -70,7 +70,7 @@ export default function App({child}) {
                         <Link
                             to={
                                 child ? `/#${item.section}`
-                                    : ''
+                                    : `${item.section==="library"?"https://kutubxona.usat.uz/":``}`
                             }
                             onClick={() => scrollToSection(item.section)}
                             className="text-2xl font-inter font-medium leading-[1.82rem]  hover:cursor-pointer text-white  text-center"
@@ -88,7 +88,7 @@ export default function App({child}) {
                 </NavbarItem>
             </NavbarContent>
 
-            <NavbarMenu className="pt-20">
+            <NavbarMenu className="pt-12">
                 {menuItems.map((item, index) => (
                     <NavbarMenuItem key={`${item.label}-${index}`}>
                         <Link
