@@ -26,7 +26,7 @@ export const fetchAllCategories = createAsyncThunk(
 const dataCategoriesSlice = createSlice({
     name: 'data',
     initialState: {
-        data: null,
+        data: JSON.parse(localStorage.getItem('categoriesData'))||null,
         loading: false,
         error: null,
     },
@@ -40,6 +40,7 @@ const dataCategoriesSlice = createSlice({
             .addCase(fetchAllCategories.fulfilled, (state, action) => {
                 state.loading = false
                 state.data = action.payload
+                localStorage.setItem('categoriesData', JSON.stringify(state.data));
             })
             .addCase(fetchAllCategories.rejected, (state, action) => {
                 state.loading = false

@@ -18,7 +18,6 @@ export default function App() {
     const { newsItem} = useSelector((state) => state.getNews)
     const [swiperHeight, setSwiperHeight] = useState(650);
     const [littleSwiperHeight,setLittleSwiperHeight]=useState(188)
-    console.log(littleSwiperHeight);
     
      useEffect(() => {
     const handleResize = () => {
@@ -95,7 +94,7 @@ export default function App() {
         watchSlidesProgress={true}
         modules={[FreeMode, Navigation, Thumbs]}
         className="myNewsSwiper"
-        style={{height: `${littleSwiperHeight+20}px`,borderRadius:"10px",}}
+        style={{height: `${littleSwiperHeight+20}px`,borderRadius:"10px",marginBottom:"20px"}}
       >
         {newsItem&&newsItem?.photos?.map((item) => (
             <SwiperSlide>

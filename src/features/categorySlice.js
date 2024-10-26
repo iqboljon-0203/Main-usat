@@ -29,7 +29,7 @@ export const fetchCategory = createAsyncThunk(
 const categorySlice = createSlice({
     name: 'category',
     initialState: {
-        categoryItem: null, // yangilik ma'lumotlarini saqlash
+        categoryItem: JSON.parse(localStorage.getItem('getCategory'))||null, // yangilik ma'lumotlarini saqlash
         loading: false, // yuklanish holati
         error: null, // xatolik holati
     },
@@ -43,6 +43,7 @@ const categorySlice = createSlice({
             .addCase(fetchCategory.fulfilled, (state, action) => {
                 state.loading = false
                 state.categoryItem = action.payload // muvaffaqiyatli yuklanish
+                localStorage.setItem('getCategory', JSON.stringify(state.categoryItem));
             })
             .addCase(fetchCategory.rejected, (state, action) => {
                 state.loading = false

@@ -11,15 +11,16 @@ import { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import {fetchData} from '../../features/allNewsSlice';
 import { useTranslation } from 'react-i18next'
-export default function App() {
+export default function App({child}) {
     const {t}=useTranslation();
     const languageNew = useSelector((state) => state.acceptLanguage.language);
     const dispatch = useDispatch()
     useEffect(() => {
         dispatch(fetchData({
             language:languageNew,
+            slug:child?child:"",
         }))
-    }, [dispatch,languageNew])
+    }, [dispatch,languageNew,child])
     const { data } = useSelector((state) => state.allNews)
     return (
         <>

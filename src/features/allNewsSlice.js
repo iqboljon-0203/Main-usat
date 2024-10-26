@@ -6,9 +6,9 @@ const secretKey=import.meta.env.VITE_SECRET_KEY;
 // GET so'rovini createAsyncThunk bilan yaratamiz
 export const fetchData = createAsyncThunk(
     'data/fetchData',
-    async ({language }, { rejectWithValue }) => {
+    async ({language,slug }, { rejectWithValue }) => {
         try {
-            const response = await axios.get(`${apiUrl}/news/latest/`, {
+            const response = await axios.get(`${apiUrl}/news/latest/${slug?`?slug=${slug}`:""}`, {
                 headers: {
                     'X-Secret': secretKey,
                     'Accept-Language': language,
@@ -26,7 +26,7 @@ export const fetchData = createAsyncThunk(
 const dataSlice = createSlice({
     name: 'data',
     initialState: {
-        data: null,
+        data: JSON.parse(localStorage.getItem('allNews'))||null,
         loading: false,
         error: null,
     },
@@ -40,6 +40,7 @@ const dataSlice = createSlice({
             .addCase(fetchData.fulfilled, (state, action) => {
                 state.loading = false
                 state.data = action.payload
+                localStorage.setItem('allNews', JSON.stringify(state.data));
             })
             .addCase(fetchData.rejected, (state, action) => {
                 state.loading = false

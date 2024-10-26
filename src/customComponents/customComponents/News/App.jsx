@@ -25,7 +25,7 @@ const UsatGallery = ({child}) => {
                       </div>
                   </div>
               </div>
-              <SliderNews></SliderNews>
+              <SliderNews child={child}></SliderNews>
           </div>
       </div>
   )

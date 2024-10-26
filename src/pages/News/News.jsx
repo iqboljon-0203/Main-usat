@@ -27,8 +27,6 @@ const NewsPage = () => {
         )
     }, [dispatch, name,languageNew])
     const {newsItem} = useSelector((state) => state.getNews)
-
-     
   return (
       <div className="newsPage">
           <Navbar child="true"></Navbar>
@@ -75,8 +73,9 @@ const NewsPage = () => {
                 />
               </div>
               <div className='newsPage_content_text'  dangerouslySetInnerHTML={{ __html: newsItem && newsItem.content }} />
-               <SliderNewsDetail></SliderNewsDetail>
-               <div className='newsPage_content_text'  dangerouslySetInnerHTML={{ __html: newsItem && newsItem.content2 }} />
+              {newsItem && newsItem?.photos?.length > 0 && (
+                <SliderNewsDetail></SliderNewsDetail>
+              )}
                <div className='newsPage_content_buttons'>
                     <div className='newsPage_content_buttons_left'>
                         <button><img src={ShareIcon} alt="Share icon" />{t("share_news")}</button>
@@ -89,7 +88,7 @@ const NewsPage = () => {
                </div>
           </div>
          
-          <News child="true"></News>
+          <News child={name}></News>
           <MainFooter child="true"></MainFooter>
       </div>
   )

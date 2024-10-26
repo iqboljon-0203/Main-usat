@@ -29,7 +29,7 @@ export const fetchNews = createAsyncThunk(
 const newsSlice = createSlice({
     name: 'news',
     initialState: {
-        newsItem: null, // yangilik ma'lumotlarini saqlash
+        newsItem: JSON.parse(localStorage.getItem('getNewsItem'))||null, // yangilik ma'lumotlarini saqlash
         loading: false, // yuklanish holati
         error: null, // xatolik holati
     },
@@ -43,6 +43,7 @@ const newsSlice = createSlice({
             .addCase(fetchNews.fulfilled, (state, action) => {
                 state.loading = false
                 state.newsItem = action.payload // muvaffaqiyatli yuklanish
+                localStorage.setItem('getNewsItem', JSON.stringify(state.newsItem));
             })
             .addCase(fetchNews.rejected, (state, action) => {
                 state.loading = false
