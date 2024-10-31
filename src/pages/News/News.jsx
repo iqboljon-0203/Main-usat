@@ -26,10 +26,124 @@ const NewsPage = () => {
             })
         )
     }, [dispatch, name,languageNew])
+   
+      const handleCopyPath = () => {
+        // Hozirgi sahnaning URL manzilini olish
+        const currentPath = window.location.pathname;
+      
+
+        // URL manzilini nuxsa olish
+        navigator.clipboard.writeText("https://usat.uz" + currentPath)
+            .then(() => {
+                alert('Nuxsa olindi!');
+            })
+            .catch(err => {
+                console.error('Nuxsa olishda xato:', err);
+            });
+    };
+      const handleShare = () => {
+    // Hozirgi sahnaning URL manzilini olish
+    const currentUrl = window.location.href;
+
+    // Nuxsa olish
+    navigator.clipboard.writeText(currentUrl).then(() => {
+      alert('URL nuxsa olindi: ' + currentUrl);
+    }).catch(err => {
+      console.error('Nuxsa olishda xato: ', err);
+    });
+
+    // Ijtimoiy tarmoqlarga ulashish URL-lari
+    const telegramShareUrl = `https://telegram.me/share/url?url=${encodeURIComponent(currentUrl)}`;
+    // const facebookShareUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(currentUrl)}`;
+    // const instagramShareUrl = `https://www.instagram.com/sharer/sharer.php?u=${encodeURIComponent(currentUrl)}`;
+
+    // Ijtimoiy tarmoqdan birini ochish
+    window.open(telegramShareUrl, '_blank');
+    // Facebook uchun: window.open(facebookShareUrl, '_blank');
+    // Instagram uchun: window.open(instagramShareUrl, '_blank');
+  };
+  const printDiv = () => {
+    const printContent = document.getElementById('printable-div');
+    const printWindow = window.open('', '_blank');
+
+    printWindow.document.write('<html><head><title>Print</title>');
+    printWindow.document.write('<style>');
+printWindow.document.write(`
+  .newsPage_title {
+    width: 100%;
+    font-family: Steppe Trial;
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 45.8px;
+    letter-spacing: -0.02em;
+    text-align: center;
+    color: #21466d;
+    margin: 0 auto;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+.printible{
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 100px;
+}
+.newsPage_content_info {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.newsPage_content_info_time {
+    font-family: Inter;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 33.6px;
+    text-align: left;
+    color: #21466d59;
+}
+.newsPage_content_info_author {
+    font-family: Inter;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 33.6px;
+    text-align: left;
+    color: #21466d59;
+}
+#newsPage_content_img {
+    width: 100%;
+    height: 580px;
+    
+}
+    #newsPage_content_img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 30px;
+}
+.newsPage_content_text{
+    font-family: Inter;
+font-size: 24px;
+font-weight: 400;
+line-height: 33.6px;
+text-align: left;
+color: #21466D;
+margin-bottom: 30px;
+margin-top: 20px;
+
+}
+`);
+printWindow.document.write('</style>');
+    printWindow.document.write('</head><body>');
+    printWindow.document.write(printContent.innerHTML);
+    printWindow.document.write('</body></html>');
+    printWindow.document.close();
+    printWindow.print();
+  };
     const {newsItem} = useSelector((state) => state.getNews)
   return (
       <div className="newsPage">
-          <Navbar className="print-only" child="true"></Navbar>
+          <Navbar child="true"></Navbar>
           <p  className="newsPage_path print-only">
         <Link to="/">{t("sahifa")} </Link>  <div
      className='dot_parent'
@@ -54,8 +168,9 @@ const NewsPage = () => {
     </span>{" "}
     <span><Link to={`/news/${newsItem && newsItem?.category?.slug}/${newsItem&&newsItem?.slug}`}>{newsItem && newsItem.title}</Link></span>
       </p>
-          <h2 className="newsPage_title print-only">{newsItem && newsItem.title}</h2>
-          <div className="newsPage_content print-only">
+          <div className="newsPage_content">
+            <div id="printable-div" className='printible'>
+                  <h2 className="newsPage_title">{newsItem && newsItem.title}</h2>
               <div className="newsPage_content_info">
                   <p className="newsPage_content_info_time">
                       {newsItem && newsItem?.created_at?.slice(0, 10)}
@@ -65,7 +180,7 @@ const NewsPage = () => {
                       
                   </p>
               </div>
-              <div className="relative w-full pb-[56.25%]">
+              <div id='newsPage_content_img' className="relative w-full pb-[56.25%]">
                    <img
                   className="absolute top-0 left-0 rounded-xl w-full h-full object-cover"
                   src={newsItem && newsItem.photo}
@@ -73,23 +188,25 @@ const NewsPage = () => {
                 />
               </div>
               <div className='newsPage_content_text'  dangerouslySetInnerHTML={{ __html: newsItem && newsItem.content }} />
+            </div>
+              
               {newsItem && newsItem?.photos?.length > 0 && (
                 <SliderNewsDetail></SliderNewsDetail>
               )}
                <div className='newsPage_content_buttons'>
                     <div className='newsPage_content_buttons_left'>
-                        <button><img src={ShareIcon} alt="Share icon" />{t("share_news")}</button>
-                        <button><img src={CopyIcon} alt="Copy icon" />{t("copy_news")}</button>
+                        <button onClick={handleShare}><img src={ShareIcon} alt="Share icon" />{t("share_news")}</button>
+                        <button onClick={handleCopyPath}><img src={CopyIcon} alt="Copy icon" />{t("copy_news")}</button>
                     </div>
-                    <button onClick={() =>window.print()}>
-                        <img  src={PrintIcon} alt="Print icon" />
+                    <button onClick={printDiv}>
+                        <img src={PrintIcon} alt="Print icon" />
                        {t("print_news")}
                     </button>
                </div>
           </div>
          
-          <News className="no-print" child={name}></News>
-          <MainFooter className="no-print" child="true"></MainFooter>
+          <News child={name}></News>
+          <MainFooter  child="true"></MainFooter>
       </div>
   )
 }
