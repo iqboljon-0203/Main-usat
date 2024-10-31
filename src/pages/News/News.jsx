@@ -47,7 +47,7 @@ const NewsPage = () => {
 
     // Nuxsa olish
     navigator.clipboard.writeText(currentUrl).then(() => {
-      alert('URL nuxsa olindi: ' + currentUrl);
+      
     }).catch(err => {
       console.error('Nuxsa olishda xato: ', err);
     });
