@@ -29,8 +29,8 @@ const NewsPage = () => {
     const {newsItem} = useSelector((state) => state.getNews)
   return (
       <div className="newsPage">
-          <Navbar child="true"></Navbar>
-          <p  className="newsPage_path">
+          <Navbar className="print-only" child="true"></Navbar>
+          <p  className="newsPage_path print-only">
         <Link to="/">{t("sahifa")} </Link>  <div
      className='dot_parent'
     >
@@ -54,8 +54,8 @@ const NewsPage = () => {
     </span>{" "}
     <span><Link to={`/news/${newsItem && newsItem?.category?.slug}/${newsItem&&newsItem?.slug}`}>{newsItem && newsItem.title}</Link></span>
       </p>
-          <h2 className="newsPage_title">{newsItem && newsItem.title}</h2>
-          <div className="newsPage_content">
+          <h2 className="newsPage_title print-only">{newsItem && newsItem.title}</h2>
+          <div className="newsPage_content print-only">
               <div className="newsPage_content_info">
                   <p className="newsPage_content_info_time">
                       {newsItem && newsItem?.created_at?.slice(0, 10)}
@@ -81,15 +81,15 @@ const NewsPage = () => {
                         <button><img src={ShareIcon} alt="Share icon" />{t("share_news")}</button>
                         <button><img src={CopyIcon} alt="Copy icon" />{t("copy_news")}</button>
                     </div>
-                    <button>
-                        <img src={PrintIcon} alt="Print icon" />
+                    <button onClick={() =>window.print()}>
+                        <img  src={PrintIcon} alt="Print icon" />
                        {t("print_news")}
                     </button>
                </div>
           </div>
          
-          <News child={name}></News>
-          <MainFooter child="true"></MainFooter>
+          <News className="no-print" child={name}></News>
+          <MainFooter className="no-print" child="true"></MainFooter>
       </div>
   )
 }

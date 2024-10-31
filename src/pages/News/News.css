@@ -148,6 +148,14 @@ border-radius: 100px;
 margin-right: 15px;
 
 }
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  .print-only {
+    background-color: red !important;
+  }
+}
 @media screen and (max-width: 1600px) {
     .newsPage_path {
     width: 80%;
