@@ -128,7 +128,7 @@
         font-size: 18px;
     }
      .navbar header ul:nth-child(3){ 
-            gap: 5px;
+        gap: 5px;
     }
 
 
@@ -142,7 +142,7 @@
         font-size: 16px;
     }
      .navbar header ul:nth-child(3){ 
-            gap: 5px;
+        gap: 5px;
     }
 
     
@@ -155,7 +155,7 @@
         font-size: 16px;
     }
     .navbar header ul:nth-child(3){ 
-            gap: 3px;
+        gap: 3px;
     }
 
     
@@ -570,7 +570,7 @@ a.navbar{
         display: none;
     }
      .navbar header ul:nth-child(2)>div>img{ 
-        width: 60%;
+        width: 70%;
     }
     .navbar header ul:nth-child(1)>button>span{ 
             width: 120%;
@@ -629,9 +629,14 @@ a.navbar{
     .navbar header ul:nth-child(3){ 
         display: none;
     }
-     .navbar header ul:nth-child(2)>div>img{ 
-        width: 126px;
+     .navbar header ul:nth-child(2)>div{ 
+        width: 40%;
+        width: 116px;
         height: 32px;
+    }
+    .navbar header ul:nth-child(2)>div>img{
+        width: 100%;
+        height: 100%;
     }
     .navbar header ul:nth-child(1)>button>span{ 
             width: 54px;

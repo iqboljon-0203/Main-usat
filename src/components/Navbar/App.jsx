@@ -58,8 +58,8 @@ export default function App({child}) {
                     <img
                         loading="lazy"
                         src={UsatLogo}
-                        width={353}
-                        height={353}
+                        
+                        
                         alt="Usat logo"
                     ></img>
                     </Link>
