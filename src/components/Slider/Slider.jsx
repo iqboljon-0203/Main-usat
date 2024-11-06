@@ -13,21 +13,24 @@ import UserGroup from '../../assets/logos/user-group.svg';
 import Graduation from '../../assets/logos/fi-rr-graduation-cap.svg';
 import Diploma from '../../assets/logos/fi-rr-diploma.svg';
 import { useTranslation } from 'react-i18next';
-// import required modules
+import SwiperCore from 'swiper';
 import { Pagination } from 'swiper/modules';
+SwiperCore.use([Pagination]);
+// import required modules
 export default function App() {
     const { t } = useTranslation();
-
     return (
         <>
             <Swiper
                 slidesPerView={1}
-                spaceBetween={20}
-                pagination={{
-                    clickable: true,
-                }}
+                spaceBetween={10}
+               pagination={{
+          el: '#custom-pagination', // Bu yerda paginationni boshqa divga ko'chiramiz
+          clickable: true,
+        }}
                 modules={[Pagination]}
                 className="mySwiper"
+                 
                 breakpoints={{
                     1100: {
                         slidesPerView: 4,

@@ -12,7 +12,6 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 20px;
     padding: 0px 0px;
 }
 .news_title {
@@ -30,29 +29,68 @@
     padding-top: 20px;
     padding-bottom: 20px;
 }
-.news_buttons {
-    width: 15%;
-    height: 86px;
+.news_link_wrapper{
     display: flex;
     align-items: center;
-    gap: 10px;
+}
+.news_link{
+    font-family: Inter;
+font-size: 18px;
+font-weight: 600;
+line-height: 25.2px;
+text-align: left;
+color: #21466D59;
+}
+
+
+.news_buttons {
+    display: block;
+    margin: 0 auto;
+    margin-top: 0px;
+    width: 13%;
+    height: 60px;
+    display: flex;
+    align-items: center;
 }
 .news_button_left {
     gap: 10px;
-    border-radius: 20px;
-    width: 50%;
-    height: 100%;
+    border-radius: 10px;
+    width: 40%;
+    height: 60px;
     background-color: #21466d26;
     border: 3px solid #21466d;
     display: flex;
     align-items: center;
     justify-content: center;
 }
+.inner_pagination{
+    width: 20%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.swiper-pagination-bullet {
+  margin: 0 4px; 
+  width: 8px;
+height: 8px;
+gap: 0px;
+border-radius: 32px;
+background: #21466D59;
+
+}
+.swiper-pagination-bullet-active {
+  background: #FFC82A !important;
+ width: 16px !important;
+height: 8px !important;
+border-radius: 32px !important;
+
+}
 .news_button_right {
     gap: 10px;
-    border-radius: 20px;
-    width: 50%;
-    height: 100%;
+    border-radius: 10px;
+    width: 40%;
+    height: 60px;
     border: 3px solid #21466d;
     background-color: #21466d;
     display: flex;
@@ -146,11 +184,14 @@
 }
 @media screen and (max-width: 650px) {
     .news_title{
-        width: 70%;
+        width: 60%;
         padding-top: 20px;
          font-size: 25px;
     font-weight: 700;
     line-height: 25.2px;
+    }
+    .news_link{
+        font-size: 16px;
     }
     .news_buttons {
     width: 30%;
@@ -162,11 +203,14 @@
 }
 @media screen and (max-width: 550px) {
     .news_title{
-        width: 70%;
+        width: 60%;
         padding-top: 20px;
          font-size: 22px;
     font-weight: 700;
     line-height: 25.2px;
+    }
+    .news_link{
+        font-size: 15px;
     }
     .news_buttons {
     width: 30%;
@@ -181,7 +225,7 @@
 }
 @media screen and (max-width: 490px) {
     .news_title{
-        width: 70%;
+        width: 50%;
         padding-top: 20px;
          font-size: 20px;
     font-weight: 700;
@@ -208,9 +252,9 @@
 }
 @media screen and (max-width: 450px) {
     .news_title{
-        width: 70%;
+        width: 55%;
         padding-top: 20px;
-         font-size: 18px;
+         font-size: 16px;
     font-weight: 700;
     line-height: 20.2px;
     }

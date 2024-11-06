@@ -20,6 +20,11 @@ const NewsCategories = () => {
             language:languageNew,
         }))
     }, [dispatch,languageNew])
+    const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
     const { data } = useSelector((state) => state.allCategories)
     console.log(data);
     

@@ -9,10 +9,12 @@ import { Link } from 'react-router-dom'
 import { Navigation } from 'swiper/modules';
 import { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
+import SwiperCore from 'swiper';
+import { Pagination } from 'swiper/modules';
+SwiperCore.use([Pagination]);
 import {fetchData} from '../../features/allNewsSlice';
-import { useTranslation } from 'react-i18next'
-export default function App({child}) {
-    const {t}=useTranslation();
+export default function App({child,paginationRef}) {
+    
     const languageNew = useSelector((state) => state.acceptLanguage.language);
     const dispatch = useDispatch()
     useEffect(() => {
@@ -25,13 +27,23 @@ export default function App({child}) {
     return (
         <>
             <Swiper
+                 pagination={{
+          el: paginationRef.current, // Bu yerda pagination elementini o'zimiz belgilaymiz
+          clickable: true,
+        }}
                 slidesPerView={1}
                 spaceBetween={20}
                 navigation={{
                     prevEl: '.news_button_left',
                     nextEl: '.news_button_right',
                 }}
-                modules={[Navigation]}
+                 onSwiper={(swiper) => {
+          swiper.params.pagination.el = paginationRef.current; // Dynamic ravishda pagination elementini o'rnatamiz
+          swiper.pagination.init();
+          swiper.pagination.render();
+          swiper.pagination.update();
+        }}
+                modules={[Navigation,Pagination]}
                 className="mySwiper"
                 style={{
                     display: 'flex',
@@ -89,7 +101,7 @@ export default function App({child}) {
 
                                 </div>
                                 </div>
-                                <Link className='slider_news_info_link' to={"/news"}>{t("news_title")}</Link>          
+                                          
                             </li>
                         </SwiperSlide>
                     ))}

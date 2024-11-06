@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import PhoneIcon from "../../../assets/logos/phone_icon.svg";
 import MessageIcon from '../../../assets/logos/message_icon.svg';
 import LocationIcon from '../../../assets/logos/location_icon.svg'
-import PhoneNumberIcon from "../../../assets/logos/phone.svg";
+import PhoneNumberIcon from "../../../assets/logos/phoneNumber.svg";
 import TelegramIcon from '../../../assets/logos/tg.svg'
 import InstagramIcon from '../../../assets/logos/insta.svg'
 import FacebookIcon from '../../../assets/logos/facebook.svg'
@@ -15,12 +15,12 @@ const MainFooter = ({child}) => {
   return (
       <div
           id="contact"
-          style={child ? { padding: '20px 20px 20px 20px' } : { padding: '20px 20px' }}
+          style={child ? { padding: '20px 20px 20px 20px' } : { padding: '0px 20px 20px 20px' }}
           className="main_footer"
       >
           <div className="main_footer_container">
               <img className="main_footer_img" src={UsatLogo} alt="Usat logo" />
-              <ul className="main_footer_data_list">
+              {/* <ul className="main_footer_data_list">
                   <li className="main_footer_data_list_item">
                       <h3 className="main_footer_data_list_item_title">
                           {t('footer_title1')}
@@ -83,7 +83,7 @@ const MainFooter = ({child}) => {
                           {t('footer_title4_info4')}
                       </div>
                   </li>
-              </ul>
+              </ul> */}
               <ul className="main_footer_contact_list">
                   <li className="main_footer_contact_list_item">
                       <h3 className="main_footer_contact_list_item_title">
@@ -108,7 +108,7 @@ const MainFooter = ({child}) => {
                                   className="footer_links"
                                   to="tel:+998788883888"
                               >
-                                  +78 888 38 88
+                                  78 888 38 88
                               </Link>
                           </p>
                       </div>
@@ -128,7 +128,7 @@ const MainFooter = ({child}) => {
                                   className="footer_links"
                                   to="https://t.me/usat_admins"
                               >
-                                  @usat_admin
+                                  @usat_admins
                               </Link>
                           </p>
                       </div>

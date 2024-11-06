@@ -13,7 +13,9 @@ import SliderNewsDetail from '../../components/SliderNewsDetail/App';
 import ShareIcon from "../../assets/logos/share.svg";
 import CopyIcon from "../../assets/logos/copy.svg";
 import PrintIcon from "../../assets/logos/pechat.svg";
+import { useLocation } from "react-router-dom";
 const NewsPage = () => {
+   
     const {t}=useTranslation();
      const languageNew = useSelector((state) => state.acceptLanguage.language)
     const { name } = useParams();
@@ -26,6 +28,11 @@ const NewsPage = () => {
             })
         )
     }, [dispatch, name,languageNew])
+     const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
    
       const handleCopyPath = () => {
         // Hozirgi sahnaning URL manzilini olish
@@ -139,7 +146,7 @@ printWindow.document.write('</style>');
     printWindow.document.write('</body></html>');
     printWindow.document.close();
     printWindow.print();
-  };
+    printWindow.close();};
     const {newsItem} = useSelector((state) => state.getNews)
   return (
       <div className="newsPage">
@@ -198,7 +205,7 @@ printWindow.document.write('</style>');
                         <button onClick={handleShare}><img src={ShareIcon} alt="Share icon" />{t("share_news")}</button>
                         <button onClick={handleCopyPath}><img src={CopyIcon} alt="Copy icon" />{t("copy_news")}</button>
                     </div>
-                    <button onClick={printDiv}>
+                    <button  onClick={printDiv}>
                         <img src={PrintIcon} alt="Print icon" />
                        {t("print_news")}
                     </button>

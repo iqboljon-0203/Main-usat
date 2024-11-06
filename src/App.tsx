@@ -4,7 +4,7 @@ import LoadingPage from './customComponents/customComponents/LoadingPage/App';
 // const UsatNumbers=lazy(()=>import('./customComponents/customComponents/UsatNumbers/App'));
 // const UsatGallery=lazy(()=>import('./customComponents/customComponents/UsatGallery/App'));
 const Hero = lazy(() => import('./customComponents/customComponents/Hero/App'));
-const About = lazy(() => import('./customComponents/customComponents/About/App'));
+const About = lazy(() => import('./customComponents/customComponents/About/App.jsx'));
 const Info = lazy(() => import('./customComponents/customComponents/Info/App'));
 const Bachelor=lazy(() => import('./customComponents/customComponents/Bachelor/App'));
 const MagistrInfo =lazy(() => import('./customComponents/customComponents/MagistrInfo/App'));

@@ -32,6 +32,7 @@
     "react-router-dom": "^6.25.0",
     "react-router-hash-link": "^2.4.3",
     "react-swiper": "^0.1.5",
+    "react-to-print": "^3.0.2",
     "swiper": "^11.1.14",
     "tailwind-merge": "^2.4.0",
     "tailwindcss-animate": "^1.0.7"

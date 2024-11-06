@@ -54,6 +54,7 @@ export default function App({child}) {
             </NavbarContent>
             <NavbarContent justify="start">
                 <NavbarBrand>
+                    <Link to={"/"}>
                     <img
                         loading="lazy"
                         src={UsatLogo}
@@ -61,6 +62,7 @@ export default function App({child}) {
                         height={353}
                         alt="Usat logo"
                     ></img>
+                    </Link>
                 </NavbarBrand>
             </NavbarContent>
 

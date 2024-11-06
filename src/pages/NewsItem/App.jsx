@@ -23,6 +23,11 @@ const NewsItem = () => {
             })
         )
     }, [dispatch, slug,languageNew])
+     const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
     const {categoryItem}=useSelector((state)=>state.category);
     
   return (

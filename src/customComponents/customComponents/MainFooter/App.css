@@ -49,7 +49,9 @@
     align-items: center;
     padding-bottom: 30px;
     padding-top: 30px;
+    padding-left: 20px;
     border-bottom: 2px solid #ffffff1a;
+    border-top: 2px solid #ffffff1a;
 }
 .main_footer_contact_list_item {
     width: 23%;
@@ -220,6 +222,7 @@ padding-left: 40px;
     .main_footer_contact_list{
         flex-wrap: wrap;
         align-items: flex-start;
+        justify-content: flex-start;
     }
     .main_footer_contact_list_item{
         width: 50%;
@@ -383,6 +386,7 @@ padding-left: 40px;
     .main_footer_contact_list{
         flex-wrap: wrap;
         align-items: flex-start;
+        padding-left: 0;
     }
     .main_footer_contact_list_item{
         width: 100%;
